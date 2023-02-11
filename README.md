@@ -1,8 +1,5 @@
 Link to Google Doc: https://drive.google.com/drive/folders/1ChRwMz8p9gLOQc6CKw27VLNi9QvchxA4?usp=share_link
 
-### Journal - IEEE Visual Analytics / INFORMS Analytical Creativity 
-
-### Lead Author - Jia Lin Cheoh
 
 # Git Structure
 
