@@ -1,0 +1,17 @@
+google.maps.Map
+document.getElementById
+google.maps.InfoWindow
+google.maps.places.PlacesService
+service.nearbySearch
+google.maps.places.PlacesServiceStatus.OK
+results.length
+place.geometry.location
+google.maps.Marker
+google.maps.event.addListener
+infowindow.setContent
+place.name
+infowindow.open
+document.createElement
+script.src
+document.getElementsByTagName
+.appendChild

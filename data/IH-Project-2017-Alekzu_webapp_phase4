@@ -1,0 +1,8 @@
+style.css
+index.js
+document.getElementById
+.addEventListener
+google.maps.Map
+google.maps.Marker
+google.maps.Animation.DROP
+google.maps.SymbolPath.CIRCLE

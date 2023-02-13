@@ -1,0 +1,14 @@
+style.css
+jquery.min.js
+embed.js
+index.js
+google.maps.Map
+document.getElementById
+.ajax
+.addEventListener
+xmlhttp.open
+xmlhttp.responseType
+xmlhttp.send
+requestBike.open
+requestBike.requestType
+requestBike.send

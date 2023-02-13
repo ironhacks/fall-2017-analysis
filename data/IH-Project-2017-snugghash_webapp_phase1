@@ -1,0 +1,14 @@
+style.css
+materialize.min.css
+materialize.min.js
+index.js
+jquery.min.js
+temp.js
+document.getElementById
+.addEventListener
+.fadeOut
+.theFader
+.fadeIn
+.text
+.ready
+.on

@@ -1,0 +1,15 @@
+google.maps.Map
+document.getElementById
+google.maps.LatLng
+document.createElement
+week.geojsonp
+script.src
+GeoJSONP.js
+document.getElementsByTagName
+.appendChild
+window.eqfeed
+results.features.length
+results.features
+.geometry.coordinates
+google.maps.Marker
+.addEventListener

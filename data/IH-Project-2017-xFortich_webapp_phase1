@@ -1,0 +1,11 @@
+style.css
+bootstrap.min.css
+index.js
+dataOfLocation.push
+google.maps.Map
+document.getElementById
+google.maps.Marker
+console.log
+map.getZoom
+google.maps.event.addListenerOnce
+map.setZoom

@@ -1,0 +1,16 @@
+style.css
+location.js
+google.maps.Map
+document.getElementById
+google.maps.InfoWindow
+navigator.geolocation
+navigator.geolocation.getCurrentPosition
+position.coords.latitude
+position.coords.longitude
+google.maps.Marker
+marker.setMap
+infoWindow.setPosition
+infoWindow.setContent
+map.setCenter
+infoWindow.close
+map.getCenter
