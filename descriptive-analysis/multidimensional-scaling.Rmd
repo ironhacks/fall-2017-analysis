@@ -1,0 +1,436 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage1_unal0.csv")
+df
+```
+
+```{r}
+# add the rownames as a proper column
+rownames(df) <- NULL
+df
+```
+
+
+```{r}
+
+rownames(df) 
+```
+
+```{r}
+vec <- colnames(df)
+vec <- vec[-1]
+vec
+```
+
+```{r}
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+
+```
+
+
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage2_unal0.csv")
+df
+```
+
+
+```{r}
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage3_unal0.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage4_unal0.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage1_unal1.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage2_unal1.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage3_unal1.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage4_unal1.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage1_unal0_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 1 UNAL 0 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage2_unal0_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 2 UNAL 0 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage3_unal0_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 3 UNAL 0 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage4_unal0_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2",  title = "Stage 4 UNAL 0 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage1_unal1_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 1 UNAL 1 No Transparency Maps", 
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage2_unal1_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 2 UNAL 1 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage3_unal1_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 3 UNAL 1 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+```{r}
+options(ggrepel.max.overlaps = Inf)
+df <- read.csv("stage4_unal1_map.csv")
+rownames(df) <- NULL
+vec <- colnames(df)
+vec <- vec[-1]
+library(magrittr)
+library(dplyr)
+library(ggpubr)
+# Cmpute MDS
+mds <- df %>%
+  dist() %>%          
+  cmdscale() %>%
+  as_tibble()
+colnames(mds) <- c("Dim.1", "Dim.2")
+# Plot MDS
+mds$label <- vec
+ggscatter(mds, x = "Dim.1", y = "Dim.2", title = "Stage 4 UNAL 1 No Transparency Maps",
+          size = 1,
+          repel = TRUE) + 
+  ggrepel::geom_text_repel(
+    aes(label = if_else(label %in% c('top1', 'top2', 'top3', "top4", "bottom1", "bottom2", "bottom3", "bottom4"), label, "")) 
+  )
+```
+
