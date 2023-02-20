@@ -52,11 +52,38 @@ print(gg.ns30)
 ```{r}
 library(gam)
 library(mgcv)
+library(visreg)
 df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
-b <- gam(ssim_exp ~ s(stage, by = comparison_type) + comparison_type, data = df)
+df$comparison_type <- factor(df$comparison_type)
+b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = cox.ph(link='identity'))
 summary(b)
+visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
+```{r}
+library(gam)
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
+summary(b)
+visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+
+
+
+```{r}
+# change fill and outline color manually 
+ggplot(df, aes(x = ssim_exp)) +
+  geom_histogram(aes(color = comparison_type, fill = comparison_type), 
+                position = "identity", bins = 30, alpha = 0.4) +
+  scale_color_manual(values = c("#00AFBB", "#E7B800")) +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800"))
+```
+
 
 ```{r}
 library(dplyr)
