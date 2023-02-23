@@ -56,10 +56,157 @@ library(visreg)
 df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
-b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = cox.ph(link='identity'))
-summary(b)
-visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b1 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(eps=.Machine$double.eps*100))
+summary(b1)
+visreg(b1, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
+
+```{r}
+library('itsadug')
+gamtabs(b1, caption='Summary of First Replicate: Functional vs Visual')
+```
+
+
+```{r}
+gam.check(b1)
+
+```
+
+```{r}
+plot(b1, pages = 1, scheme = 1, all.terms = TRUE, seWithMean = TRUE)
+```
+
+```{r}
+library(gam)
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal1_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b2 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(b2)
+visreg(b2, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+```{r}
+library('itsadug')
+gamtabs(b2, caption='Summary of Second Replicate: Functional vs Visual')
+```
+
+
+
+
+```{r}
+library(gam)
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal2_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b3 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(b3)
+visreg(b3, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+
+```{r}
+library('itsadug')
+gamtabs(b3, caption='Summary of Third Replicate: Functional vs Visual')
+```
+
+```{r}
+library(stargazer)
+stargazer(b1, b2, b3)
+```
+
+
+
+```{r}
+df <- read.csv("df_color_exp_unal0.csv")
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b4 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(b4)
+visreg(b4, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+
+```{r}
+library('itsadug')
+gamtabs(b4, caption='Summary of First Replicate: Comparison Between Individual Visual Components')
+```
+
+
+```{r}
+df <- read.csv("df_color_exp_unal1.csv")
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b5 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(b5)
+visreg(b5, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+```{r}
+library('itsadug')
+gamtabs(b5, caption='Summary of Second Replicate: Comparison Between Individual Visual Components')
+```
+
+
+
+```{r}
+df <- read.csv("df_color_exp_unal2.csv")
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b6 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
+summary(b6)
+visreg(b6, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+```{r}
+library('itsadug')
+gamtabs(b6, caption='Summary of Third Replicate: Comparison Between Individual Visual Components')
+```
+
+```{r}
+library(stargazer)
+stargazer(b1, b2, b3)
+```
+
+```{r}
+library(stargazer)
+stargazer(b4, b5, b6)
+```
+```{r}
+library(gtsummary)
+#> #BlackLivesMatter
+library(mgcv)
+packageVersion("gtsummary")
+tbl_regression(b6, tidy_fun = tidy_gam)
+```
+```{r}
+# build gtsummary table
+tbl <- tbl_summary(b6)
+
+# using the {gt} package
+as_gt(tbl) %>% gt::as_latex()
+```
+
+
 ```{r}
 library(gam)
 library(mgcv)
@@ -67,11 +214,10 @@ library(visreg)
 df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
-b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
+b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = binomial(link="logit"))
 summary(b)
 visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
-
 
 
 
