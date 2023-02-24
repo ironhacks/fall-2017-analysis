@@ -78,13 +78,14 @@ ggplot(df, aes(x=ssim_exp_scale, fill=comparison_type)) + geom_density(alpha=.3)
 
 ```{r}
 library('brms')
+library('lmerTest')
 df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-a1 <- brm(ssim_exp_scale ~ s(stage) + comparison_type, data = df, family = "zero_one_inflated_beta")
+a1 <- brm(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = "zero_one_inflated_beta")
 summary(a1)
 ```
 
