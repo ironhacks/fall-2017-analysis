@@ -50,7 +50,6 @@ print(gg.ns30)
 
 
 ```{r}
-library(gam)
 library(mgcv)
 library(visreg)
 df <- read.csv("final_unal0_functions_complete.csv")
@@ -59,10 +58,36 @@ df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-b1 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(eps=.Machine$double.eps*100))
+b1 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(link = "logit", eps=.Machine$double.eps*1000))
 summary(b1)
 visreg(b1, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
+
+```{r}
+library(ggplot2)
+# Interleaved histograms
+ggplot(df, aes(x=ssim_exp_scale, fill=comparison_type)) +
+    geom_histogram(binwidth=.5, position="dodge")
+```
+
+```{r}
+# Density plots with semi-transparent fill
+ggplot(df, aes(x=ssim_exp_scale, fill=comparison_type)) + geom_density(alpha=.3)
+```
+
+
+```{r}
+library('brms')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 <- brm(ssim_exp_scale ~ s(stage) + comparison_type, data = df, family = "zero_one_inflated_beta")
+summary(a1)
+```
+
 
 ```{r}
 library('itsadug')
@@ -136,7 +161,7 @@ df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-b4 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+b4 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(link="logit"))
 summary(b4)
 visreg(b4, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
