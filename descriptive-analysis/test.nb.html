@@ -216,24 +216,23 @@ pre code {
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSgnYnJtcycpXG5saWJyYXJ5KCdsbWVyVGVzdCcpXG5saWJyYXJ5KCdtZ2N2JylcbmRmIDwtIHJlYWQuY3N2KFwiZGZfY29sb3JfZXhwX3VuYWwwLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>library(&#39;brms&#39;)
-library(&#39;lmerTest&#39;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2xpYnJhcnkoZ2FtKVxubGlicmFyeSgnbWdjdicpXG5kZiA8LSByZWFkLmNzdihcImZpbmFsLmNzdlwiKVxuIyBmaXQgYSBzbW9vdGggd2hpY2ggdmFyaWVzIGJ5IGNvbXBhcmlzb25fdHlwZVxuZGYkY29tcGFyaXNvbl90eXBlIDwtIGZhY3RvcihkZiRjb21wYXJpc29uX3R5cGUpXG4jIHNlcGFyYXRlIHNtb290aCBmdW5jdGlvbnMgZm9yIGVhY2ggbGV2ZWwgb2YgdGhlIGZhY3RvciBcbiMgZWFjaCBoYXMgaXRzIG93biBzbW9vdGhuZXNzIHBhcmFtZXRlciBcbiMgY2VudHJlZCAoIG5vIGdyb3VwIG1lYW5zICkgc28gaW5jbHVkZSBmYWN0b3IgYXMgYSBmaXhlZCBlZmZlY3RcbmExIDwtIGdhbShzc2ltX2V4cF9uZXcgfiBzKHN0YWdlKSArIGNvbXBhcmlzb25fdHlwZSwgZGF0YSA9IGRmLCBmYW1pbHkgPSBiZXRhcigpKVxuc3VtbWFyeShhMSlcbmBgYCJ9 -->
+<pre class="r"><code>#library(gam)
 library(&#39;mgcv&#39;)
-df &lt;- read.csv(&quot;df_color_exp_unal0.csv&quot;)</code></pre>
+df &lt;- read.csv(&quot;final.csv&quot;)
+# fit a smooth which varies by comparison_type
+df$comparison_type &lt;- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 &lt;- gam(ssim_exp_new ~ s(stage) + comparison_type, data = df, family = betar())
+summary(a1)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2Fubm90IG9wZW4gZmlsZSAnZGZfY29sb3JfZXhwX3VuYWwwLmNzdic6IE5vIHN1Y2ggZmlsZSBvciBkaXJlY3RvcnlFcnJvciBpbiBmaWxlKGZpbGUsIFwicnRcIikgOiBjYW5ub3Qgb3BlbiB0aGUgY29ubmVjdGlvblxuIn0= -->
-<pre><code>cannot open file &#39;df_color_exp_unal0.csv&#39;: No such file or directoryError in file(file, &quot;rt&quot;) : cannot open the connection</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gKGZ1bmN0aW9uICh3aGljaCA9IGRldi5jdXIoKSkgIDogXG4gIGNhbm5vdCBzaHV0IGRvd24gZGV2aWNlIDEgKHRoZSBudWxsIGRldmljZSlcbiJ9 -->
-<pre><code>Error in (function (which = dev.cur())  : 
-  cannot shut down device 1 (the null device)</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KbGlicmFyeSgnYnJtcycpCmxpYnJhcnkoJ2xtZXJUZXN0JykKbGlicmFyeSgnbWdjdicpCmRmIDwtIHJlYWQuY3N2KCJmaW5hbC5jc3YiKQojIGZpdCBhIHNtb290aCB3aGljaCB2YXJpZXMgYnkgY29tcGFyaXNvbl90eXBlCmRmJGNvbXBhcmlzb25fdHlwZSA8LSBmYWN0b3IoZGYkY29tcGFyaXNvbl90eXBlKQojIHNlcGFyYXRlIHNtb290aCBmdW5jdGlvbnMgZm9yIGVhY2ggbGV2ZWwgb2YgdGhlIGZhY3RvciAKIyBlYWNoIGhhcyBpdHMgb3duIHNtb290aG5lc3MgcGFyYW1ldGVyIAojIGNlbnRyZWQgKCBubyBncm91cCBtZWFucyApIHNvIGluY2x1ZGUgZmFjdG9yIGFzIGEgZml4ZWQgZWZmZWN0CmExIDwtIGdhbShzc2ltX2V4cF9uZXcgfiBzKHN0YWdlLCBrID0gNCwgZnggPSBUUlVFLCBieSA9IGNvbXBhcmlzb25fdHlwZSkgKyBjb21wYXJpc29uX3R5cGUsIGRhdGEgPSBkZiwgZmFtaWx5ID0gYmV0YXIoKSkKc3VtbWFyeShhMSkKYGBgCgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KI2xpYnJhcnkoZ2FtKQpsaWJyYXJ5KCdtZ2N2JykKZGYgPC0gcmVhZC5jc3YoImZpbmFsLmNzdiIpCiMgZml0IGEgc21vb3RoIHdoaWNoIHZhcmllcyBieSBjb21wYXJpc29uX3R5cGUKZGYkY29tcGFyaXNvbl90eXBlIDwtIGZhY3RvcihkZiRjb21wYXJpc29uX3R5cGUpCiMgc2VwYXJhdGUgc21vb3RoIGZ1bmN0aW9ucyBmb3IgZWFjaCBsZXZlbCBvZiB0aGUgZmFjdG9yIAojIGVhY2ggaGFzIGl0cyBvd24gc21vb3RobmVzcyBwYXJhbWV0ZXIgCiMgY2VudHJlZCAoIG5vIGdyb3VwIG1lYW5zICkgc28gaW5jbHVkZSBmYWN0b3IgYXMgYSBmaXhlZCBlZmZlY3QKYTEgPC0gZ2FtKHNzaW1fZXhwX25ldyB+IHMoc3RhZ2UpICsgY29tcGFyaXNvbl90eXBlLCBkYXRhID0gZGYsIGZhbWlseSA9IGJldGFyKCkpCnN1bW1hcnkoYTEpCmBgYAoKCgo=</div>
 
 
 

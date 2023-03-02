@@ -257,7 +257,7 @@ df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-a2 <- gam(ssim_exp ~ s(stage, k = 5, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+a2 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
 summary(a2)
 visreg(a2, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
@@ -322,18 +322,16 @@ gamtabs(b2, caption='Summary of Second Replicate: Functional vs Visual')
 ```{r}
 library(mgcv)
 library(visreg)
-df <- read.csv("final_unal0_functions_complete.csv")
+df <- read.csv("final.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-b3 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
+b3 <- gam(ssim_exp_new ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
 summary(b3)
 visreg(b3, xvar = "stage", by = "comparison_type", data = df, method = "REML")
-```
-```{r}
-gam.check(b3)
+
 ```
 
 
