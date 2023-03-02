@@ -74,7 +74,21 @@ ggplot(df, aes(x=ssim_exp_scale, fill=comparison_type)) +
 # Density plots with semi-transparent fill
 ggplot(df, aes(x=ssim_exp_scale, fill=comparison_type)) + geom_density(alpha=.3)
 ```
-
+```{r}
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0 <- lm(ssim_exp_scale ~ factor(comparison_type), data = df)
+summary(a0)
+```
+```{r}
+t.test(df$ssim_exp_scale[df$comparison_type == 'functions'], df$ssim_exp_scale[df$comparison_type == 'complete'] )
+```
 
 ```{r}
 library('brms')
@@ -85,19 +99,196 @@ df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-a1 <- brm(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = "zero_one_inflated_beta")
+a0_a <- lm(ssim_exp_scale ~ comparison_type + factor(link1_change), data = df)
+summary(a0_a)
+```
+```{r}
+library(ggplot2)
+ggplot(df, aes(x = comparison_type, ssim_exp_scale)) + facet_wrap(~link1_change) + geom_jitter(width = 0.1, height = 0.1)
+```
+
+
+
+```{r}
+library('lme4')
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0_b <- lmer(ssim_exp_scale ~ comparison_type + (1 | link1_change), data = df)
+summary(a0_b)
+```
+```{r}
+library('lme4')
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0_c <- lmer(ssim_exp_scale ~ comparison_type + (comparison_type | link1_change), data = df)
+summary(a0_c)
+```
+```{r}
+library('lme4')
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0_d <- brm(ssim_exp_scale ~ comparison_type , data = df, iter = 1000, prior = NULL)
+summary(a0_d)
+```
+
+```{r}
+visreg(a0_d)
+```
+
+
+```{r}
+get_prior(ssim_exp_scale ~ comparison_type + (comparison_type | link1_change), data = df)
+```
+```{r}
+library('lme4')
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0_e <- brm(ssim_exp_scale ~ comparison_type + (comparison_type | link1_change), data = df, iter = 3000, control = list( adapt_delta = .99))
+summary(a0_e)
+```
+
+```{r}
+visreg(a0_e)
+```
+
+
+
+```{r}
+library('lme4')
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a0_e <- brm(ssim_exp_scale ~ comparison_type + (comparison_type | link1_change), data = df, iter = 1000, family = zero_one_inflated_beta())
+summary(a0_e)
+```
+
+
+```{r}
+library('brms')
+library('lmerTest')
+df <- read.csv("final_unal0_functions_complete.csv")
+print(df)
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 <- brm(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = zero_one_inflated_beta(), iter = 3000)
 summary(a1)
 ```
+
+```{r}
+msms <- conditional_smooths(a1)
+plot(msms)
+```
+```{r}
+pp_check(a1, ndraws = 100)
+```
+
+
+
+```{r}
+msms <- conditional_effects(a1)
+plot(msms)
+```
+
+
+```{r}
+library(sjstats)
+performance::r2(a1)
+```
+
+```{r}
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a2 <- gam(ssim_exp_scale ~ s(stage, k = 3, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
+summary(a2)
+visreg(a2, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+```{r}
+# Density plots with semi-transparent fill
+library(ggplot2)
+ggplot(df, aes(x=ssim_exp_scale, fill=comparison_typed)) + geom_density(alpha=.3)
+```
+
+
+
+```{r}
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a2 <- gam(ssim_exp ~ s(stage, k = 5, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(a2)
+visreg(a2, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+```{r}
+plot.gam(a2$gam, residuals = TRUE, pch =1, cex = 1, shade = 
+         TRUE, shade.col = "lightblue", seWithMean = TRUE, 
+         pages = 1, all.terms = TRUE)
+```
+
+
+
+```{r}
+install.packages(c("MCMCglmm", "arm"), dependencies=TRUE)    
+library(MCMCglmm)
+library(arm)
+sm1<-sim(a2,1000)
+smfixef=sm1@fixef
+smfixef=as.mcmc(smfixef)
+```
+
+
 
 
 ```{r}
 library('itsadug')
-gamtabs(b1, caption='Summary of First Replicate: Functional vs Visual')
+gamtabs(a2, caption='Summary of First Replicate: Functional vs Visual')
 ```
 
 
 ```{r}
-gam.check(b1)
+gam.check(a2)
 
 ```
 
@@ -129,18 +320,20 @@ gamtabs(b2, caption='Summary of Second Replicate: Functional vs Visual')
 
 
 ```{r}
-library(gam)
 library(mgcv)
 library(visreg)
-df <- read.csv("final_unal2_functions_complete.csv")
+df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-b3 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+b3 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
 summary(b3)
 visreg(b3, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+```{r}
+gam.check(b3)
 ```
 
 
@@ -162,9 +355,25 @@ df$comparison_type <- factor(df$comparison_type)
 # separate smooth functions for each level of the factor 
 # each has its own smoothness parameter 
 # centred ( no group means ) so include factor as a fixed effect
-b4 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(link="logit"))
+b4 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = gaussian())
 summary(b4)
 visreg(b4, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+
+```{r}
+df <- read.csv("df_color_exp_unal0.csv")
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+b4 <- brm(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = zero_one_inflated_beta(), iter = 12000, cores = 4)
+summary(b4)
+
+```
+```{r}
+msms <- conditional_smooths(b4)
+plot(msms)
 ```
 
 
@@ -202,6 +411,21 @@ b6 <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparis
 summary(b6)
 visreg(b6, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
+
+```{r}
+library('brms')
+library('lmerTest')
+df <- read.csv("df_color_exp_unal0.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 <- brm(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = zero_one_inflated_beta(), iter = 1000)
+summary(a1)
+```
+
+
 
 ```{r}
 library('itsadug')
@@ -245,6 +469,15 @@ summary(b)
 visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
 
+```{r}
+## Interactions
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+fit.in1 <- lm(ssim_exp_scale ~ stage*comparison_type, data=df)
+visreg(fit.in1, "stage", by="comparison_type")
+summary(fit.in1)
+```
 
 
 ```{r}
@@ -264,5 +497,19 @@ library(ggplot2)
 gg.ns30 <- ggplot(df,aes(x=stage, y=ssim_exp,col=comparison_type))+geom_point()+
   geom_smooth(method='gam',formula=y ~ splines::bs(x, 30)) + facet_grid(comparison_type ~.)
 print(gg.ns30)
+```
+
+```{r}
+library('brms')
+library('lmerTest')
+library('mgcv')
+df <- read.csv("df_color_exp_unal0.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = zero_one_inflated_beta())
+summary(a1)
 ```
 

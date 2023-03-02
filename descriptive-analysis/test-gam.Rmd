@@ -1,0 +1,53 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(mgcv)
+library(visreg)
+df <- read.csv("final_unal0_functions_complete.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+b <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(link="logit"), method = "REML")
+summary(b)
+visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+par(mfrow=c(1,2))
+plot(b,
+     trans=plogis,
+     shift=coef(b)[1],
+     main = "BETAR GAM Shifted Intercept")
+```
+
+```{r}
+library(mgcv)
+library(visreg)
+new_df <- subset(df, df$comparison_type != "complete" & df$comparison_type != "simple")  
+df <- read.csv("df_color_exp_unal0.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+b <- gam(ssim_exp_scale ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = new_df, family = quasibinomial(), method = "REML")
+summary(b)
+visreg(b, xvar = "stage", by = "comparison_type", data = new_df, method = "REML")
+```
+
+
+```{r}
+library(betareg)
+gy <- betareg(ssim_exp_scale ~ comparison_type * stage, data = df)
+summary(gy)
+```
+

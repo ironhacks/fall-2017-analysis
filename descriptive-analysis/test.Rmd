@@ -1,0 +1,25 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library('brms')
+library('lmerTest')
+library('mgcv')
+df <- read.csv("final.csv")
+# fit a smooth which varies by comparison_type
+df$comparison_type <- factor(df$comparison_type)
+# separate smooth functions for each level of the factor 
+# each has its own smoothness parameter 
+# centred ( no group means ) so include factor as a fixed effect
+a1 <- gam(ssim_exp_new ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar())
+summary(a1)
+```
+
+
+
