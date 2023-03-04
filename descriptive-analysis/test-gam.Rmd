@@ -9,23 +9,39 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 
 ```{r}
 library(mgcv)
+library(visreg)
 df1 <- read.csv("final_functions.csv")
 # fit a smooth which varies by comparison_type
 df1$type <- factor(df1$type)
-b <- gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML")
+b <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML")
 summary(b)
-visreg(b, xvar = "phase", by = "type", data = df1, method = "REML")
+a <- lm(dist_search ~ stage * type, data = df1)
+summary(a)
+visreg(b, yvar = "dist_search", xvar = "stage", ylab= "dist_search",  by = "type", data = df1, method = "REML")
 ```
 
 ```{r}
+gam.check(b)
+```
+
+
+```{r}
+library(mgcv)
+library(visreg)
 df <- read.csv("final_visual.csv")
-df2 <- subset(df, df$type != "charts")  
+df2 <- subset(df, df$type != "simple")  
 # fit a smooth which varies by comparison_type
 df2$type <- factor(df2$type)
-b2 <- gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df2, family = betar(link="logit"), method = "REML")
+b2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df2, family = betar(link="logit"), method = "REML")
 summary(b2)
-visreg(b2, xvar = "phase", by = "type", data = df2, method = "REML")
+visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
 ```
+
+```{r}
+plot(b, pages = 1, all.terms = TRUE)
+```
+
+
 
 ```{r}
 library(visreg)
@@ -34,16 +50,20 @@ df <- read.csv("final_visual.csv")
 #df <- subset(df, df$type != "charts")  
 # fit a smooth which varies by comparison_type
 df$type <- factor(df$type)
-b1 <- gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+b1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 summary(b1)
-visreg(b1, xvar = "phase", by = "type", data = df, method = "REML")
+visreg(b1, xvar = "stage", by = "type", data = df, method = "REML")
 ```
 
 ```{r}
 library('itsadug')
-gamtabs(b1, caption="Complete Visual, Maps and Simple Visual")
+gamtabs(b2, caption="Complete Visual, Maps and Simple Visual")
 ```
 
+```{r}
+library('itsadug')
+gamtabs(b1, caption="Visual Search vs Functions Search")
+```
 
 
 
@@ -69,9 +89,9 @@ gamtabs(b, caption='Visual vs Code')
 library(modelsummary)
 options("modelsummary_format_numeric_latex" = "plain")
 models <- list(
-"Vis Code" = gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML"),
-"Without Chart" = gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df2, family = betar(link="logit"), method = "REML"),
-"With Chart" = gam(dist_search ~ s(phase, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+"Vis Code" = gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML"),
+"Without Chart" = gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df2, family = betar(link="logit"), method = "REML"),
+"With Chart" = gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 )
 
 modelsummary(models, output = "latex",

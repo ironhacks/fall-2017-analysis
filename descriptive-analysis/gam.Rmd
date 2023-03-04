@@ -456,13 +456,12 @@ as_gt(tbl) %>% gt::as_latex()
 
 
 ```{r}
-library(gam)
 library(mgcv)
 library(visreg)
 df <- read.csv("final_unal0_functions_complete.csv")
 # fit a smooth which varies by comparison_type
 df$comparison_type <- factor(df$comparison_type)
-b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = binomial(link="logit"))
+b <- gam(ssim_exp ~ s(stage, k = 4, fx = TRUE, by = comparison_type) + comparison_type, data = df, family = betar(link="logit"))
 summary(b)
 visreg(b, xvar = "stage", by = "comparison_type", data = df, method = "REML")
 ```
