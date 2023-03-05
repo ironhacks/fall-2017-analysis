@@ -18,7 +18,7 @@ You'll have to use the `Terminal` application to run the commands.
 
 Open the terminal, by pressing <kbd>Cmd</kbd> + <kbd>Space</kbd>. Then, write `Terminal` and press <kbd>Enter</kbd>.
 
-## Mandatory Software
+## Mandatory Software link[https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html]
 
  - Compile and install OpenCV 2.4.13.
 
