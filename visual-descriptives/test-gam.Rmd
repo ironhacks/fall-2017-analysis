@@ -37,6 +37,14 @@ AIC(c1, c2)
 ```
 
 ```{r}
+c1 <- lm(dist_search ~ stage + type, data = df1, family = betar(link="logit"), method = "REML")
+c2 <- gam(dist_search ~ s(stage, k = 4, by = type, fx= TRUE) + type, data = df1, family = betar(link="logit"), method = "REML")
+AIC(c1, c2)
+```
+
+
+
+```{r}
 library(ggplot2)
 ggplot(df1, aes(x = stage, y = dist_search)) + geom_point() +
     geom_line(colour = "red", size = 1.2, aes(y = fitted(c1))) +
