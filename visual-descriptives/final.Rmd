@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(mgcv)
+library(visreg)
+df1 <- read.csv("output/final_functions.csv")
+# fit a smooth which varies by comparison_type
+df1$type <- factor(df1$type)
+#OLS regression for Value Stocks
+df1
+```
+
+```{r}
+df1 = df1[df1$type == 'Functions Search',]
+df1 = df1[df1$link1_change == 'jsalcinar',]
+df1
+```
+
+```{r}
+#OLS regression for Value Stocks
+olsLVS = lm(dist_search~stage, data=df1)
+#OLS regression for Growth Stocks
+summary(olsLVS)
+# Select Rows by column value
+
+```
+
+```{r}
+#Turn the MSwM package on
+library(MSwM)
+# MS for Value Stocks (k is number of regimes, 6 is for means of 5 variables
+# + 1 for volatility)
+msLVS = msmFit(olsLVS)
+```
+

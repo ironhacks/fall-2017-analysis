@@ -11,7 +11,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(mgcv)
 library(visreg)
-df1 <- read.csv("final_functions.csv")
+df1 <- read.csv("output/final_functions.csv")
 # fit a smooth which varies by comparison_type
 df1$type <- factor(df1$type)
 b <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML")
@@ -24,6 +24,25 @@ plot(b, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col =
 plot(b, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 
+```{r}
+vis.gam(b, theta = 120, n.grid = 50, lwd = 0.2)
+```
+
+
+
+```{r}
+c1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) + type, data = df1, family = betar(link="logit"), method = "REML")
+c2 <- gam(dist_search ~ s(stage, k = 4, by = type, fx= TRUE) + type, data = df1, family = betar(link="logit"), method = "REML")
+AIC(c1, c2)
+```
+
+```{r}
+library(ggplot2)
+ggplot(df1, aes(x = stage, y = dist_search)) + geom_point() +
+    geom_line(colour = "red", size = 1.2, aes(y = fitted(c1))) +
+    geom_line(colour = "blue", size = 1.2, aes(y = fitted(c2))) +
+    theme_bw()
+```
 
 
 ```{r}

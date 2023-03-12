@@ -37,7 +37,7 @@ Open the terminal, by pressing <kbd>Cmd</kbd> + <kbd>Space</kbd>. Then, write `T
 
 ```sh
 # Clone the repository
-git clone https://github.com/RCODI/visual-data.git
+https://github.com/ironhacks/visual-novelty-research
 
 # Enter in the downloaded directory
 cd visual-data
