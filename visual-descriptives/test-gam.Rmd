@@ -68,6 +68,18 @@ plot(b2, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 
 
+
+```{r}
+
+df <- read.csv("final_visual.csv")
+df2 <- subset(df, df$type == "complete")  
+# fit a smooth which varies by comparison_type
+df2$stage <- factor(df2$stage)
+mod <- lm(dist_search ~ stage, df2)
+summary(mod)
+```
+
+
 ```{r}
 library(visreg)
 library(mgcv)
