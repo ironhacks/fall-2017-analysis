@@ -12,11 +12,62 @@ df <- read.csv("output_new.csv")
 df$phase <-factor(df$phase)
 df
 ```
+
+
+```{r}
+library(mgcv)
+library(visreg)
+mod <- gam(len_40 ~ phase, data = df, family = poisson(), method = "REML")
+summary(mod)
+plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+```{r}
+library(mgcv)
+library(visreg)
+mod <- gam(mashup ~ phase, data = df, family = binomial(), method = "REML")
+summary(mod)
+plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+
+
+```{r}
+library(mgcv)
+library(visreg)
+mod <- gam(len_data ~ phase, data = df, family = poisson(), method = "REML")
+summary(mod)
+plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+
 ```{r}
 df$phase <- relevel(df$phase, ref = 4)
 mod <- lm(len_data ~ phase, df)
 summary(mod)
 ```
+```{r}
+library(mgcv)
+df$mashup <- factor(df$mashup)
+mod <- gam( len_40 ~ , family = poisson(), df)
+summary(mod)
+```
+
+```{r}
+mod <- lm(novelty ~ len_40, df)
+summary(mod)
+```
+
+
+```{r}
+## high performing participant more likely to insert novel data, but at the middle stage
+mod <- lm(total_raw ~ len_40, df)
+summary(mod)
+```
+
+
 
 ```{r}
 mod <- lm(len_40 ~ phase, df)
