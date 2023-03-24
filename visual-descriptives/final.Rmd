@@ -10,12 +10,38 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(mgcv)
 library(visreg)
-df1 <- read.csv("output/final_functions.csv")
+df1 <- read.csv("complete.csv")
 # fit a smooth which varies by comparison_type
 df1$type <- factor(df1$type)
 #OLS regression for Value Stocks
+df1 <- df1[,c("dist_search")]
+#df1 <- df1[order(df1$stage),]
 df1
 ```
+
+```{r}
+library(CausalImpact)
+df1 <- data.matrix(df1)
+matplot(df1, type = "l")
+```
+
+```{r}
+pre.period <- c(1, 420)
+post.period <- c(421, 511)
+```
+
+```{r}
+impact <- CausalImpact(df1, pre.period, post.period)
+```
+
+```{r}
+plot(impact)
+```
+```{r}
+summary(impact)
+```
+
+
 
 ```{r}
 df1 = df1[df1$type == 'Functions Search',]

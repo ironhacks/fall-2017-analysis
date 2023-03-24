@@ -8,6 +8,31 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
 ```{r}
+library(depmixS4)
+df <- read.csv("output_new.csv")
+df$phase <-factor(df$phase)
+HMM_model <- depmix(len_40 ~ phase, nstates = 2, data = df)
+HMM_fm <- fit(HMM_model)
+HMM_fm
+```
+
+```{r}
+probs <- posterior(HMM_fm)
+probs
+```
+
+```{r}
+plot(probs)
+```
+
+
+
+
+
+
+
+
+```{r}
 df <- read.csv("output_new.csv")
 df$phase <-factor(df$phase)
 df
@@ -17,11 +42,60 @@ df
 ```{r}
 library(mgcv)
 library(visreg)
-mod <- gam(len_40 ~ phase, data = df, family = poisson(), method = "REML")
+library(modelsummary)
+mod <- glm(len_data ~ phase, data = df, family = "poisson")
 summary(mod)
-plot(mod, all.terms = TRUE)
+#plot(mod, all.terms = TRUE)
 visreg(mod)
 ```
+
+```{r}
+library(mgcv)
+library(visreg)
+library(modelsummary)
+mod <- glm(len_40 ~ phase, data = df, family = "poisson")
+summary(mod)
+#plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+```{r}
+library(mgcv)
+library(visreg)
+library(modelsummary)
+mod <- lm(total_raw ~ len_40, data = df)
+summary(mod)
+#plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+```{r}
+library(mgcv)
+library(visreg)
+library(modelsummary)
+mod <- lm(novelty ~ len_40, data = df)
+summary(mod)
+#plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+
+
+
+```{r}
+library(mgcv)
+library(visreg)
+library(modelsummary)
+mod <- lm(len_data ~ len_40, data = df)
+summary(mod)
+#plot(mod, all.terms = TRUE)
+visreg(mod)
+```
+
+
+
+
+
 ```{r}
 library(mgcv)
 library(visreg)

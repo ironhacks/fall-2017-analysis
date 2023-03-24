@@ -10,6 +10,17 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(mgcv)
 library(visreg)
+df <- read.csv("complete.csv")
+b2 <- lm(dist_search ~ stage, df)
+summary(b2)
+visreg(b2)
+```
+
+
+
+```{r}
+library(mgcv)
+library(visreg)
 df <- read.csv("data-form.csv")
 df$type <- factor(df$type)
 b2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = quasibinomial(link="logit"), method = "REML")
@@ -18,6 +29,22 @@ summary(b2)
 plot(b2, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
 plot(b2, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
+
+
+```{r}
+library(mgcv)
+library(visreg)
+df <- read.csv("data_only.csv")
+df$type <- factor(df$type)
+b2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = quasibinomial(link="logit"), method = "REML")
+summary(b2)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(b2, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(b2, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+```
+
+
+
 
 ```{r}
 library(mgcv)
