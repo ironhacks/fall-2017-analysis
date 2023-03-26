@@ -114,8 +114,11 @@ plot(mod1, page = 1, all.terms = TRUE)
 ```
 
 ```{r}
-mod1 <- gam(dist_search ~ stage + type, data = df, family = betar(link="logit"), method = "REML")
-mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) + type, data = df, family = betar(link="logit"), method = "REML")
+df$type <- factor(df$type)
+mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 AIC(mod1, mod2)
 ```
+
+
 
