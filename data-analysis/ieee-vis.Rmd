@@ -7,6 +7,23 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
 
+```{r}
+library(mgcv)
+library(betareg)
+library(visreg)
+library(modelsummary)
+df <- read.csv("final_visual.csv")
+df$type <- factor(df$type)
+#df <- subset(df, type != "charts"&  type != "simple")
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+summary(mod)
+```
+
+
 
 ```{r}
 library(mgcv)
