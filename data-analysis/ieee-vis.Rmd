@@ -96,6 +96,15 @@ plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col
 plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 ```{r}
+mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+AIC(mod1, mod2)
+```
+
+
+
+
+```{r}
 library(mgcv)
 df <- read.csv("complete_novel.csv")
 df$type <-factor(df$type)

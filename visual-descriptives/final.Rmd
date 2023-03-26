@@ -13,9 +13,9 @@ library(visreg)
 df1 <- read.csv("complete.csv")
 # fit a smooth which varies by comparison_type
 df1$type <- factor(df1$type)
+df1 <- df1[order(df1$stage),]
 #OLS regression for Value Stocks
 df1 <- df1[,c("dist_search")]
-#df1 <- df1[order(df1$stage),]
 df1
 ```
 
@@ -26,8 +26,8 @@ matplot(df1, type = "l")
 ```
 
 ```{r}
-pre.period <- c(1, 420)
-post.period <- c(421, 511)
+pre.period <- c(1, 480)
+post.period <- c(481, 511)
 ```
 
 ```{r}
@@ -39,6 +39,9 @@ plot(impact)
 ```
 ```{r}
 summary(impact)
+```
+```{r}
+library(CausalGAM)
 ```
 
 
