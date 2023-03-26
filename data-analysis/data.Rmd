@@ -12,8 +12,8 @@ library(depmixS4)
 df <- read.csv("output_new.csv")
 df$phase <-factor(df$phase)
 HMM_model <- depmix(len_40 ~ phase, nstates = 2, data = df)
-HMM_fm <- fit(HMM_model)
-HMM_fm
+HMM_fm <- fit(HMM_model, verbose = FALSE)
+summary(HMM_fit)
 ```
 
 ```{r}
@@ -53,7 +53,7 @@ visreg(mod)
 library(mgcv)
 library(visreg)
 library(modelsummary)
-mod <- glm(len_40 ~ phase, data = df, family = "poisson")
+mod <- lm(len_40 ~ phase, data = df)
 summary(mod)
 #plot(mod, all.terms = TRUE)
 visreg(mod)

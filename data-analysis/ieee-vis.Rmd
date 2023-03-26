@@ -1,0 +1,94 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+
+```{r}
+library(mgcv)
+library(betareg)
+df <- read.csv("complete.csv")
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+visreg(mod)
+```
+```{r}
+library(mgcv)
+library(betareg)
+library(visreg)
+df <- read.csv("raw_data.csv")
+df['dist_search'][df['dist_search'] == 1] <- 0.99
+df['dist_search'][df['dist_search'] == 0] <- 0.01
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+visreg(mod)
+```
+
+```{r}
+library(mgcv)
+library(betareg)
+library(visreg)
+df <- read.csv("novel.csv")
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = quasibinomial(link="logit"), method = "REML")
+summary(mod)
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+visreg(mod)
+```
+
+
+
+```{r}
+library(mgcv)
+df <- read.csv("all_data.csv")
+df$type <-factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+```
+```{r}
+library(mgcv)
+df <- read.csv("data_novel.csv")
+df$type <-factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+```
+```{r}
+library(mgcv)
+df <- read.csv("complete_novel.csv")
+df$type <-factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+```
+
+
+```{r}
+library(mgcv)
+df <- read.csv("complete_data.csv")
+df$type <-factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod, output = "latex")
+```
+
