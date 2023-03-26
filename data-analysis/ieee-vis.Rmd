@@ -11,10 +11,17 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 ```{r}
 library(mgcv)
 library(betareg)
+library(visreg)
+library(modelsummary)
 df <- read.csv("complete.csv")
 mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
 summary(mod)
 visreg(mod)
+modelsummary(mod, metrics = "all", gof_omit = "RMSE|R2")
 ```
 ```{r}
 library(mgcv)
@@ -55,8 +62,11 @@ df$type <-factor(df$type)
 mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 summary(mod)
 #visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
-plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
-plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+#plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 ```{r}
 library(mgcv)
@@ -87,8 +97,25 @@ df$type <-factor(df$type)
 mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 summary(mod)
 #visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
-plot(mod, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
 plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
-modelsummary(mod, output = "latex")
+modelsummary(mod)
+```
+
+```{r}
+mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) + type, data = df, family = betar(link="logit"), method = "REML")
+AIC(mod1, mod2)
+plot(mod1, page = 1, all.terms = TRUE)
+```
+
+```{r}
+mod1 <- gam(dist_search ~ stage + type, data = df, family = betar(link="logit"), method = "REML")
+mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) + type, data = df, family = betar(link="logit"), method = "REML")
+AIC(mod1, mod2)
 ```
 
