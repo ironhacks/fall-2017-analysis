@@ -14,6 +14,7 @@ library(visreg)
 library(modelsummary)
 df <- read.csv("final_visual.csv")
 df$type <- factor(df$type)
+#df$stage <- factor(df$stage)
 #df <- subset(df, type != "charts"&  type != "simple")
 mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 plot(mod,
@@ -21,6 +22,14 @@ plot(mod,
      shift=coef(mod)[1],
      main = "Beta GAM Shifted Intercept")
 summary(mod)
+```
+
+
+
+```{r}
+mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+mod2 <- lm(dist_search ~ stage + type, data = df)
+AIC(mod1, mod2)
 ```
 
 
