@@ -25,7 +25,6 @@ summary(mod)
 ```
 
 
-
 ```{r}
 mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 mod2 <- lm(dist_search ~ stage + type, data = df)
@@ -40,7 +39,7 @@ library(betareg)
 library(visreg)
 library(modelsummary)
 df <- read.csv("complete.csv")
-mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE), data = df, family = betar(link="logit"), method = "REML")
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) , data = df, family = betar(link="logit"), method = "REML")
 plot(mod,
      trans=plogis,
      shift=coef(mod)[1],
