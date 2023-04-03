@@ -145,19 +145,19 @@ df$type <-factor(df$type)
 mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 summary(mod)
 #visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
-plot(mod,
+plot(mod, pages = 1,
      trans=plogis,
      shift=coef(mod)[1],
      main = "Beta GAM Shifted Intercept")
 plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
 plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
-modelsummary(mod)
+modelsummary(mod,  gof_omit = "RMSE|R2", output = "table.docx")
 ```
 
 ```{r}
 mod1 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
 mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE) + type, data = df, family = betar(link="logit"), method = "REML")
-mod2 <- lm(dist_search ~ stage + type, data = df)
+mod3 <- lm(dist_search ~ stage + type, data = df)
 AIC(mod1, mod2, mod3)
 plot(mod1, page = 1, all.terms = TRUE)
 ```
@@ -169,5 +169,80 @@ mod2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = d
 AIC(mod1, mod2)
 ```
 
+```{r}
+library(mgcv)
+df <- read.csv("processed_data/len_data_novel.csv")
+mod <- gam(len_except_min_criteria ~ s(phase, k = 4, fx = TRUE), data = df, family = poisson(), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod)
+```
+```{r}
+library(mgcv)
+df <- read.csv("processed_data/len_data_novel.csv")
+mod <- gam(len_novel_20 ~ s(phase, k = 4, fx = TRUE), data = df, family = poisson(), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod)
+```
 
+```{r}
+library(mgcv)
+df <- read.csv("processed_data/len_data_novel.csv")
+mod <- gam(len_data ~ s(phase, k = 4, fx = TRUE), data = df, family = poisson(), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod)
+```
+
+```{r}
+library(mgcv)
+df <- read.csv("processed_data/data_novel.csv")
+df$type <- factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod)
+```
+
+
+```{r}
+library(mgcv)
+df <- read.csv("processed_data/min_criteria_data.csv")
+df$type <- factor(df$type)
+mod <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df, family = betar(link="logit"), method = "REML")
+summary(mod)
+#visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
+plot(mod,
+     trans=plogis,
+     shift=coef(mod)[1],
+     main = "Beta GAM Shifted Intercept")
+plot(mod, pages = 1, trans = plogis, shift = coef(mod)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(mod, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+modelsummary(mod)
+```
 
