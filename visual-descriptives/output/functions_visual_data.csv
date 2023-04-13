@@ -1,0 +1,1044 @@
+,type,dist_search,stage
+0,data,0.99,1
+1,data,0.99,1
+2,data,0.01,1
+3,data,0.01,1
+4,data,0.01,1
+5,data,0.5897435897435898,1
+6,data,0.01,1
+7,data,0.01,1
+8,data,0.01,1
+9,data,0.99,1
+10,data,0.01,1
+11,data,0.01,1
+12,data,0.01,1
+13,data,0.99,1
+14,data,0.01,1
+15,data,0.99,1
+16,data,0.01,1
+17,data,0.01,1
+18,data,0.01,1
+19,data,0.01,1
+20,data,0.01,1
+21,data,0.01,1
+22,data,0.99,1
+23,data,0.01,1
+24,data,0.4074074074074074,1
+25,data,0.01,1
+26,data,0.01,1
+27,data,0.5925925925925926,1
+28,data,0.01,1
+29,data,0.01,1
+30,data,0.01,1
+31,data,0.01,1
+32,data,0.99,1
+33,data,0.01,1
+34,data,0.01,1
+35,data,0.99,1
+36,data,0.01,1
+37,data,0.01,1
+38,data,0.99,1
+39,data,0.01,1
+40,data,0.01,1
+41,data,0.01,1
+42,data,0.01,1
+43,data,0.99,1
+44,data,0.01,1
+45,data,0.01,1
+46,data,0.01,1
+47,data,0.01,1
+48,data,0.01,1
+49,data,0.99,1
+50,data,0.01,1
+51,data,0.01,1
+52,data,0.01,1
+53,data,0.01,1
+54,data,0.01,1
+55,data,0.01,1
+56,data,0.01,1
+57,data,0.01,1
+58,data,0.99,1
+59,data,0.01,1
+60,data,0.99,1
+61,data,0.5,1
+62,data,0.01,1
+63,data,0.01,1
+64,data,0.01,1
+65,data,0.01,1
+66,data,0.99,1
+67,data,0.01,1
+68,data,0.01,1
+69,data,0.01,1
+70,data,0.01,1
+71,data,0.99,1
+72,data,0.01,1
+73,data,0.01,1
+74,data,0.01,1
+75,data,0.01,1
+76,data,0.99,1
+77,data,0.01,1
+78,data,0.01,1
+79,data,0.01,1
+80,data,0.01,1
+81,data,0.01,1
+82,data,0.01,1
+83,data,0.01,1
+84,data,0.99,1
+85,data,0.01,1
+86,data,0.01,1
+87,data,0.01,1
+88,data,0.01,1
+89,data,0.01,1
+90,data,0.01,1
+91,data,0.01,1
+92,data,0.01,1
+93,data,0.99,1
+94,data,0.99,1
+95,data,0.01,1
+96,data,0.99,1
+97,data,0.01,1
+98,data,0.01,1
+99,data,0.01,1
+100,data,0.99,1
+101,data,0.01,1
+102,data,0.01,1
+103,data,0.01,1
+104,data,0.01,1
+105,data,0.99,1
+106,data,0.01,1
+107,data,0.01,1
+108,data,0.01,2
+109,data,0.1290322580645161,2
+110,data,0.99,2
+111,data,0.01,2
+112,data,0.01,2
+113,data,0.0256410256410256,2
+114,data,0.01,2
+115,data,0.01,2
+116,data,0.01,2
+117,data,0.01,2
+118,data,0.01,2
+119,data,0.99,2
+120,data,0.99,2
+121,data,0.01,2
+122,data,0.99,2
+123,data,0.01,2
+124,data,0.01,2
+125,data,0.99,2
+126,data,0.01,2
+127,data,0.01,2
+128,data,0.01,2
+129,data,0.01,2
+130,data,0.01,2
+131,data,0.01,2
+132,data,0.4285714285714286,2
+133,data,0.01,2
+134,data,0.01,2
+135,data,0.01,2
+136,data,0.99,2
+137,data,0.01,2
+138,data,0.01,2
+139,data,0.99,2
+140,data,0.99,2
+141,data,0.99,2
+142,data,0.99,2
+143,data,0.01,2
+144,data,0.01,2
+145,data,0.3199999999999999,2
+146,data,0.01,2
+147,data,0.01,2
+148,data,0.99,2
+149,data,0.01,2
+150,data,0.99,2
+151,data,0.01,2
+152,data,0.01,2
+153,data,0.01,2
+154,data,0.01,2
+155,data,0.01,2
+156,data,0.01,2
+157,data,0.01,2
+158,data,0.01,2
+159,data,0.01,2
+160,data,0.01,2
+161,data,0.99,2
+162,data,0.99,2
+163,data,0.01,2
+164,data,0.01,2
+165,data,0.01,2
+166,data,0.01,2
+167,data,0.4186046511627906,2
+168,data,0.0714285714285714,2
+169,data,0.01,2
+170,data,0.01,2
+171,data,0.01,2
+172,data,0.01,2
+173,data,0.1904761904761904,2
+174,data,0.01,2
+175,data,0.01,2
+176,data,0.01,2
+177,data,0.99,2
+178,data,0.2903225806451612,2
+179,data,0.01,2
+180,data,0.01,2
+181,data,0.01,2
+182,data,0.01,2
+183,data,0.3947368421052631,2
+184,data,0.01,2
+185,data,0.01,2
+186,data,0.01,2
+187,data,0.99,2
+188,data,0.99,2
+189,data,0.01,2
+190,data,0.01,2
+191,data,0.0999999999999999,2
+192,data,0.01,2
+193,data,0.01,2
+194,data,0.01,2
+195,data,0.01,2
+196,data,0.01,2
+197,data,0.01,2
+198,data,0.01,2
+199,data,0.99,2
+200,data,0.5428571428571429,2
+201,data,0.01,2
+202,data,0.01,2
+203,data,0.3461538461538461,2
+204,data,0.01,2
+205,data,0.01,2
+206,data,0.01,2
+207,data,0.99,2
+208,data,0.99,2
+209,data,0.2068965517241379,2
+210,data,0.01,2
+211,data,0.01,2
+212,data,0.99,2
+213,data,0.01,2
+214,data,0.01,2
+215,data,0.01,3
+216,data,0.01,3
+217,data,0.01,3
+218,data,0.99,3
+219,data,0.01,3
+220,data,0.0512820512820513,3
+221,data,0.01,3
+222,data,0.99,3
+223,data,0.01,3
+224,data,0.3333333333333333,3
+225,data,0.01,3
+226,data,0.2558139534883721,3
+227,data,0.01,3
+228,data,0.01,3
+229,data,0.01,3
+230,data,0.4074074074074074,3
+231,data,0.01,3
+232,data,0.2058823529411765,3
+233,data,0.01,3
+234,data,0.01,3
+235,data,0.01,3
+236,data,0.99,3
+237,data,0.01,3
+238,data,0.01,3
+239,data,0.01,3
+240,data,0.99,3
+241,data,0.01,3
+242,data,0.6341463414634146,3
+243,data,0.01,3
+244,data,0.2903225806451612,3
+245,data,0.01,3
+246,data,0.01,3
+247,data,0.01,3
+248,data,0.99,3
+249,data,0.99,3
+250,data,0.99,3
+251,data,0.01,3
+252,data,0.99,3
+253,data,0.1071428571428571,3
+254,data,0.01,3
+255,data,0.01,3
+256,data,0.1142857142857143,3
+257,data,0.01,3
+258,data,0.99,3
+259,data,0.01,3
+260,data,0.01,3
+261,data,0.01,3
+262,data,0.01,3
+263,data,0.01,3
+264,data,0.01,3
+265,data,0.01,3
+266,data,0.01,3
+267,data,0.01,3
+268,data,0.01,3
+269,data,0.01,3
+270,data,0.01,3
+271,data,0.01,3
+272,data,0.01,3
+273,data,0.0714285714285714,3
+274,data,0.99,3
+275,data,0.99,3
+276,data,0.01,3
+277,data,0.01,3
+278,data,0.01,3
+279,data,0.01,3
+280,data,0.01,3
+281,data,0.01,3
+282,data,0.01,3
+283,data,0.01,3
+284,data,0.01,3
+285,data,0.01,3
+286,data,0.01,3
+287,data,0.01,3
+288,data,0.01,3
+289,data,0.01,3
+290,data,0.01,3
+291,data,0.1627906976744185,3
+292,data,0.01,3
+293,data,0.01,3
+294,data,0.01,3
+295,data,0.4516129032258065,3
+296,data,0.01,3
+297,data,0.01,3
+298,data,0.01,3
+299,data,0.15625,3
+300,data,0.01,3
+301,data,0.01,3
+302,data,0.01,3
+303,data,0.01,3
+304,data,0.01,3
+305,data,0.01,3
+306,data,0.01,3
+307,data,0.01,3
+308,data,0.01,3
+309,data,0.0789473684210526,3
+310,data,0.99,3
+311,data,0.2352941176470588,3
+312,data,0.01,3
+313,data,0.01,3
+314,data,0.99,3
+315,data,0.01,3
+316,data,0.99,3
+317,data,0.1944444444444444,3
+318,data,0.01,3
+319,data,0.01,3
+320,data,0.01,3
+321,data,0.01,3
+322,data,0.01,3
+323,data,0.01,4
+324,data,0.01,4
+325,data,0.01,4
+326,data,0.01,4
+327,data,0.01,4
+328,data,0.2558139534883721,4
+329,data,0.01,4
+330,data,0.01,4
+331,data,0.99,4
+332,data,0.01,4
+333,data,0.01,4
+334,data,0.01,4
+335,data,0.1489361702127659,4
+336,data,0.01,4
+337,data,0.01,4
+338,data,0.01,4
+339,data,0.01,4
+340,data,0.99,4
+341,data,0.99,4
+342,data,0.01,4
+343,data,0.01,4
+344,data,0.3076923076923077,4
+345,data,0.01,4
+346,data,0.01,4
+347,data,0.1428571428571429,4
+348,data,0.01,4
+349,data,0.01,4
+350,data,0.2272727272727273,4
+351,data,0.01,4
+352,data,0.0645161290322581,4
+353,data,0.01,4
+354,data,0.99,4
+355,data,0.01,4
+356,data,0.99,4
+357,data,0.01,4
+358,data,0.7333333333333334,4
+359,data,0.01,4
+360,data,0.01,4
+361,data,0.1999999999999999,4
+362,data,0.01,4
+363,data,0.01,4
+364,data,0.01,4
+365,data,0.01,4
+366,data,0.99,4
+367,data,0.01,4
+368,data,0.99,4
+369,data,0.01,4
+370,data,0.99,4
+371,data,0.01,4
+372,data,0.01,4
+373,data,0.01,4
+374,data,0.01,4
+375,data,0.99,4
+376,data,0.01,4
+377,data,0.99,4
+378,data,0.01,4
+379,data,0.01,4
+380,data,0.01,4
+381,data,0.01,4
+382,data,0.4516129032258065,4
+383,data,0.01,4
+384,data,0.01,4
+385,data,0.01,4
+386,data,0.99,4
+387,data,0.01,4
+388,data,0.01,4
+389,data,0.2222222222222222,4
+390,data,0.01,4
+391,data,0.01,4
+392,data,0.01,4
+393,data,0.4615384615384615,4
+394,data,0.01,4
+395,data,0.01,4
+396,data,0.99,4
+397,data,0.01,4
+398,data,0.01,4
+399,data,0.01,4
+400,data,0.01,4
+401,data,0.01,4
+402,data,0.01,4
+403,data,0.99,4
+404,data,0.01,4
+405,data,0.01,4
+406,data,0.01,4
+407,data,0.01,4
+408,data,0.01,4
+409,data,0.01,4
+410,data,0.01,4
+411,data,0.01,4
+412,data,0.01,4
+413,data,0.01,4
+414,data,0.01,4
+415,data,0.5952380952380952,4
+416,data,0.01,4
+417,data,0.01,4
+418,data,0.01,4
+419,data,0.175,4
+420,data,0.01,4
+421,data,0.01,4
+422,data,0.01,4
+423,data,0.99,4
+424,data,0.01,4
+425,data,0.0769230769230768,4
+426,data,0.01,4
+427,data,0.01,4
+428,data,0.01,4
+429,data,0.01,4
+430,data,0.99,4
+431,Functions Search,0.318182,1
+432,Functions Search,0.272727,1
+433,Functions Search,0.99,1
+434,Functions Search,0.484848,1
+435,Functions Search,0.36,1
+436,Functions Search,0.121951,1
+437,Functions Search,0.636364,1
+438,Functions Search,0.4,1
+439,Functions Search,0.178571,1
+440,Functions Search,0.1875,1
+441,Functions Search,0.99,1
+442,Functions Search,0.99,1
+443,Functions Search,0.99,1
+444,Functions Search,0.348837,1
+445,Functions Search,0.99,1
+446,Functions Search,0.166667,1
+447,Functions Search,0.857143,1
+448,Functions Search,0.333333,1
+449,Functions Search,0.99,1
+450,Functions Search,0.99,2
+451,Functions Search,0.424528,2
+452,Functions Search,0.333333,2
+453,Functions Search,0.99,2
+454,Functions Search,0.272727,2
+455,Functions Search,0.99,2
+456,Functions Search,0.136364,2
+457,Functions Search,0.445946,2
+458,Functions Search,0.115385,2
+459,Functions Search,0.357143,2
+460,Functions Search,0.99,2
+461,Functions Search,0.99,2
+462,Functions Search,0.99,2
+463,Functions Search,0.22449,2
+464,Functions Search,0.6,2
+465,Functions Search,0.375,2
+466,Functions Search,0.99,3
+467,Functions Search,0.333333,3
+468,Functions Search,0.99,3
+469,Functions Search,0.375,3
+470,Functions Search,0.99,3
+471,Functions Search,0.99,3
+472,Functions Search,0.99,3
+473,Functions Search,0.068182,3
+474,Functions Search,0.115385,3
+475,Functions Search,0.216867,3
+476,Functions Search,0.99,3
+477,Functions Search,0.285714,4
+478,Functions Search,0.99,4
+479,Functions Search,0.99,4
+480,Functions Search,0.783069,4
+481,Functions Search,0.57971,4
+482,Functions Search,0.40678,4
+483,Functions Search,0.99,4
+484,Functions Search,0.701754,4
+485,Functions Search,0.99,4
+486,Functions Search,0.905882,4
+487,Functions Search,0.363636,1
+488,Functions Search,0.99,1
+489,Functions Search,0.99,1
+490,Functions Search,0.375,1
+491,Functions Search,0.99,1
+492,Functions Search,0.01,1
+493,Functions Search,0.99,1
+494,Functions Search,0.99,1
+495,Functions Search,0.098214,1
+496,Functions Search,0.99,1
+497,Functions Search,0.5,1
+498,Functions Search,0.444444,1
+499,Functions Search,0.157895,1
+500,Functions Search,0.328767,1
+501,Functions Search,0.176471,2
+502,Functions Search,0.681818,2
+503,Functions Search,0.451087,2
+504,Functions Search,0.574713,2
+505,Functions Search,0.99,2
+506,Functions Search,0.99,2
+507,Functions Search,0.969697,2
+508,Functions Search,0.99,2
+509,Functions Search,0.99,2
+510,Functions Search,0.99,2
+511,Functions Search,0.142857,2
+512,Functions Search,0.73913,2
+513,Functions Search,0.176471,3
+514,Functions Search,0.237288,3
+515,Functions Search,0.99,3
+516,Functions Search,0.99,3
+517,Functions Search,0.017143,3
+518,Functions Search,0.896907,3
+519,Functions Search,0.99,3
+520,Functions Search,0.125,3
+521,Functions Search,0.99,3
+522,Functions Search,0.99,3
+523,Functions Search,0.99,3
+524,Functions Search,0.45098,3
+525,Functions Search,0.99,3
+526,Functions Search,0.7625,3
+527,Functions Search,0.99,4
+528,Functions Search,0.99,4
+529,Functions Search,0.99,4
+530,Functions Search,0.99,4
+531,Functions Search,0.99,4
+532,Functions Search,0.99,4
+533,Functions Search,0.06383,4
+534,Functions Search,0.99,4
+535,Functions Search,0.99,4
+536,Functions Search,0.285714,4
+537,Functions Search,0.728814,4
+538,Functions Search,0.99,4
+539,Functions Search,0.687204,4
+540,Functions Search,0.99,4
+541,Functions Search,0.5,1
+542,Functions Search,0.117647,1
+543,Functions Search,0.176471,1
+544,Functions Search,0.666667,1
+545,Functions Search,0.545455,1
+546,Functions Search,0.243902,1
+547,Functions Search,0.8,1
+548,Functions Search,0.625,1
+549,Functions Search,0.99,1
+550,Functions Search,0.99,1
+551,Functions Search,0.99,1
+552,Functions Search,0.99,1
+553,Functions Search,0.99,1
+554,Functions Search,0.99,1
+555,Functions Search,0.592593,1
+556,Functions Search,0.058824,1
+557,Functions Search,0.25,1
+558,Functions Search,0.571429,1
+559,Functions Search,0.99,1
+560,Functions Search,0.047619,1
+561,Functions Search,0.058824,1
+562,Functions Search,0.6,1
+563,Functions Search,0.99,1
+564,Functions Search,0.15,1
+565,Functions Search,0.1,1
+566,Functions Search,0.012821,1
+567,Functions Search,0.5,2
+568,Functions Search,0.99,2
+569,Functions Search,0.333333,2
+570,Functions Search,0.25,2
+571,Functions Search,0.074074,2
+572,Functions Search,0.99,2
+573,Functions Search,0.571429,2
+574,Functions Search,0.99,2
+575,Functions Search,0.99,2
+576,Functions Search,0.125,2
+577,Functions Search,0.333333,2
+578,Functions Search,0.642857,2
+579,Functions Search,0.99,2
+580,Functions Search,0.12,2
+581,Functions Search,0.99,2
+582,Functions Search,0.99,2
+583,Functions Search,0.99,2
+584,Functions Search,0.125,2
+585,Functions Search,0.666667,2
+586,Functions Search,0.785714,2
+587,Functions Search,0.023438,2
+588,Functions Search,0.99,2
+589,Functions Search,0.68,3
+590,Functions Search,0.270588,3
+591,Functions Search,0.12,3
+592,Functions Search,0.99,3
+593,Functions Search,0.828571,3
+594,Functions Search,0.99,3
+595,Functions Search,0.99,3
+596,Functions Search,0.99,3
+597,Functions Search,0.293103,3
+598,Functions Search,0.102564,3
+599,Functions Search,0.8,3
+600,Functions Search,0.99,3
+601,Functions Search,0.5,3
+602,Functions Search,0.99,3
+603,Functions Search,0.361702,3
+604,Functions Search,0.99,3
+605,Functions Search,0.666667,3
+606,Functions Search,0.285714,3
+607,Functions Search,0.99,3
+608,Functions Search,0.695652,3
+609,Functions Search,0.088235,3
+610,Functions Search,0.266667,3
+611,Functions Search,0.285714,3
+612,Functions Search,0.99,3
+613,Functions Search,0.09375,4
+614,Functions Search,0.578947,4
+615,Functions Search,0.533333,4
+616,Functions Search,0.878049,4
+617,Functions Search,0.941176,4
+618,Functions Search,0.99,4
+619,Functions Search,0.99,4
+620,Functions Search,0.6,4
+621,Functions Search,0.99,4
+622,Functions Search,0.9125,4
+623,Functions Search,0.777778,4
+624,Functions Search,0.793651,4
+625,Functions Search,0.99,4
+626,Functions Search,0.99,4
+627,Functions Search,0.5,4
+628,Functions Search,0.576577,4
+629,Functions Search,0.875,4
+630,Functions Search,0.730769,4
+631,Functions Search,0.528736,4
+632,Functions Search,0.918367,4
+633,Functions Search,0.99,4
+634,Functions Search,0.047619,4
+635,Functions Search,0.99,4
+636,Functions Search,0.99,4
+637,Functions Search,0.450262,4
+638,Functions Search,0.085106,4
+639,Functions Search,0.99,4
+640,Functions Search,0.5,4
+641,Functions Search,0.525,4
+642,Functions Search,0.99,4
+643,Functions Search,0.99,4
+644,Visual Search,0.713,1
+645,Visual Search,0.507,1
+646,Visual Search,0.96,1
+647,Visual Search,0.607,1
+648,Visual Search,0.01,1
+649,Visual Search,0.642,1
+650,Visual Search,0.678,1
+651,Visual Search,0.627,1
+652,Visual Search,0.01,1
+653,Visual Search,0.479,1
+654,Visual Search,0.01,1
+655,Visual Search,0.883,1
+656,Visual Search,0.84,1
+657,Visual Search,0.561,1
+658,Visual Search,0.439,1
+659,Visual Search,0.01,1
+660,Visual Search,0.01,1
+661,Visual Search,0.049,1
+662,Visual Search,0.942,1
+663,Visual Search,0.58,1
+664,Visual Search,0.659,1
+665,Visual Search,0.724,1
+666,Visual Search,0.985,1
+667,Visual Search,0.01,1
+668,Visual Search,0.01,1
+669,Visual Search,0.01,2
+670,Visual Search,0.746,2
+671,Visual Search,0.894,2
+672,Visual Search,0.01,2
+673,Visual Search,0.01,2
+674,Visual Search,0.01,2
+675,Visual Search,0.341,2
+676,Visual Search,0.01,2
+677,Visual Search,0.01,2
+678,Visual Search,0.01,2
+679,Visual Search,0.01,2
+680,Visual Search,0.01,2
+681,Visual Search,0.579,2
+682,Visual Search,0.408,2
+683,Visual Search,0.439,2
+684,Visual Search,0.01,2
+685,Visual Search,0.549,2
+686,Visual Search,0.01,2
+687,Visual Search,0.719,2
+688,Visual Search,0.57,2
+689,Visual Search,0.419,2
+690,Visual Search,0.647,2
+691,Visual Search,0.19,2
+692,Visual Search,0.01,2
+693,Visual Search,0.01,2
+694,Visual Search,0.01,2
+695,Visual Search,0.002,3
+696,Visual Search,0.636,3
+697,Visual Search,0.149,3
+698,Visual Search,0.01,3
+699,Visual Search,0.707,3
+700,Visual Search,0.084,3
+701,Visual Search,0.01,3
+702,Visual Search,0.01,3
+703,Visual Search,0.01,3
+704,Visual Search,0.18,3
+705,Visual Search,0.01,3
+706,Visual Search,0.662,3
+707,Visual Search,0.579,3
+708,Visual Search,0.272,3
+709,Visual Search,0.257,3
+710,Visual Search,0.01,3
+711,Visual Search,0.01,3
+712,Visual Search,0.131,3
+713,Visual Search,0.01,3
+714,Visual Search,0.59,3
+715,Visual Search,0.671,3
+716,Visual Search,0.01,3
+717,Visual Search,0.01,3
+718,Visual Search,0.01,3
+719,Visual Search,0.01,3
+720,Visual Search,0.01,3
+721,Visual Search,0.664,4
+722,Visual Search,0.539,4
+723,Visual Search,0.494,4
+724,Visual Search,0.01,4
+725,Visual Search,0.01,4
+726,Visual Search,0.085,4
+727,Visual Search,0.539,4
+728,Visual Search,0.323,4
+729,Visual Search,0.01,4
+730,Visual Search,0.01,4
+731,Visual Search,0.01,4
+732,Visual Search,0.119,4
+733,Visual Search,0.875,4
+734,Visual Search,0.242,4
+735,Visual Search,0.348,4
+736,Visual Search,0.01,4
+737,Visual Search,0.672,4
+738,Visual Search,0.131,4
+739,Visual Search,0.01,4
+740,Visual Search,0.59,4
+741,Visual Search,0.01,4
+742,Visual Search,0.304,4
+743,Visual Search,0.01,4
+744,Visual Search,0.01,4
+745,Visual Search,0.01,4
+746,Visual Search,0.01,4
+747,Visual Search,0.01,1
+748,Visual Search,0.266,1
+749,Visual Search,0.595,1
+750,Visual Search,0.01,1
+751,Visual Search,0.488,1
+752,Visual Search,0.676,1
+753,Visual Search,0.01,1
+754,Visual Search,0.64,1
+755,Visual Search,0.01,1
+756,Visual Search,0.183,1
+757,Visual Search,0.708,1
+758,Visual Search,0.801,1
+759,Visual Search,0.01,1
+760,Visual Search,0.01,1
+761,Visual Search,0.01,1
+762,Visual Search,0.881,1
+763,Visual Search,0.634,1
+764,Visual Search,0.725,1
+765,Visual Search,0.089,1
+766,Visual Search,0.094,1
+767,Visual Search,0.163,1
+768,Visual Search,0.184,1
+769,Visual Search,0.01,1
+770,Visual Search,0.008,1
+771,Visual Search,0.676,1
+772,Visual Search,0.555,1
+773,Visual Search,0.696,1
+774,Visual Search,0.374,1
+775,Visual Search,0.135,1
+776,Visual Search,0.731,2
+777,Visual Search,0.813,2
+778,Visual Search,0.595,2
+779,Visual Search,0.55,2
+780,Visual Search,0.01,2
+781,Visual Search,0.718,2
+782,Visual Search,0.612,2
+783,Visual Search,0.635,2
+784,Visual Search,0.531,2
+785,Visual Search,0.251,2
+786,Visual Search,0.821,2
+787,Visual Search,0.514,2
+788,Visual Search,0.809,2
+789,Visual Search,0.01,2
+790,Visual Search,0.66,2
+791,Visual Search,0.041,2
+792,Visual Search,0.145,2
+793,Visual Search,0.724,2
+794,Visual Search,0.715,2
+795,Visual Search,0.01,2
+796,Visual Search,0.006,2
+797,Visual Search,0.257,2
+798,Visual Search,0.01,2
+799,Visual Search,0.01,2
+800,Visual Search,0.016,2
+801,Visual Search,0.886,2
+802,Visual Search,0.006,2
+803,Visual Search,0.062,2
+804,Visual Search,0.017,2
+805,Visual Search,0.928,3
+806,Visual Search,0.001,3
+807,Visual Search,0.01,3
+808,Visual Search,0.01,3
+809,Visual Search,0.01,3
+810,Visual Search,0.003,3
+811,Visual Search,0.01,3
+812,Visual Search,0.655,3
+813,Visual Search,0.01,3
+814,Visual Search,0.748,3
+815,Visual Search,0.009,3
+816,Visual Search,0.514,3
+817,Visual Search,0.139,3
+818,Visual Search,0.01,3
+819,Visual Search,0.734,3
+820,Visual Search,0.01,3
+821,Visual Search,0.174,3
+822,Visual Search,0.724,3
+823,Visual Search,0.191,3
+824,Visual Search,0.002,3
+825,Visual Search,0.138,3
+826,Visual Search,0.093,3
+827,Visual Search,0.01,3
+828,Visual Search,0.003,3
+829,Visual Search,0.044,3
+830,Visual Search,0.401,3
+831,Visual Search,0.01,3
+832,Visual Search,0.329,3
+833,Visual Search,0.003,3
+834,Visual Search,0.712,4
+835,Visual Search,0.01,4
+836,Visual Search,0.903,4
+837,Visual Search,0.01,4
+838,Visual Search,0.01,4
+839,Visual Search,0.127,4
+840,Visual Search,0.549,4
+841,Visual Search,0.684,4
+842,Visual Search,0.01,4
+843,Visual Search,0.063,4
+844,Visual Search,0.156,4
+845,Visual Search,0.759,4
+846,Visual Search,0.01,4
+847,Visual Search,0.01,4
+848,Visual Search,0.146,4
+849,Visual Search,0.524,4
+850,Visual Search,0.735,4
+851,Visual Search,0.01,4
+852,Visual Search,0.085,4
+853,Visual Search,0.01,4
+854,Visual Search,0.152,4
+855,Visual Search,0.138,4
+856,Visual Search,0.01,4
+857,Visual Search,0.009,4
+858,Visual Search,0.017,4
+859,Visual Search,0.191,4
+860,Visual Search,0.585,4
+861,Visual Search,0.001,4
+862,Visual Search,0.007,4
+863,Visual Search,0.607,1
+864,Visual Search,0.878,1
+865,Visual Search,0.674,1
+866,Visual Search,0.273,1
+867,Visual Search,0.001,1
+868,Visual Search,0.506,1
+869,Visual Search,0.674,1
+870,Visual Search,0.057,1
+871,Visual Search,0.436,1
+872,Visual Search,0.876,1
+873,Visual Search,0.228,1
+874,Visual Search,0.674,1
+875,Visual Search,0.674,1
+876,Visual Search,0.608,2
+877,Visual Search,0.36,2
+878,Visual Search,0.674,2
+879,Visual Search,0.252,2
+880,Visual Search,0.01,2
+881,Visual Search,0.773,2
+882,Visual Search,0.674,2
+883,Visual Search,0.205,2
+884,Visual Search,0.591,2
+885,Visual Search,0.761,2
+886,Visual Search,0.165,2
+887,Visual Search,0.674,2
+888,Visual Search,0.674,2
+889,Visual Search,0.383,3
+890,Visual Search,0.674,3
+891,Visual Search,0.797,3
+892,Visual Search,0.674,3
+893,Visual Search,0.291,3
+894,Visual Search,0.248,3
+895,Visual Search,0.99,3
+896,Visual Search,0.712,3
+897,Visual Search,0.01,3
+898,Visual Search,0.392,3
+899,Visual Search,0.674,3
+900,Visual Search,0.211,3
+901,Visual Search,0.417,3
+902,Visual Search,0.713,3
+903,Visual Search,0.53,3
+904,Visual Search,0.355,3
+905,Visual Search,0.646,3
+906,Visual Search,0.674,3
+907,Visual Search,0.542,3
+908,Visual Search,0.674,3
+909,Visual Search,0.671,3
+910,Visual Search,0.537,4
+911,Visual Search,0.01,4
+912,Visual Search,0.29,4
+913,Visual Search,0.01,4
+914,Visual Search,0.066,4
+915,Visual Search,0.218,4
+916,Visual Search,0.99,4
+917,Visual Search,0.001,4
+918,Visual Search,0.01,4
+919,Visual Search,0.278,4
+920,Visual Search,0.01,4
+921,Visual Search,0.01,4
+922,Visual Search,0.347,4
+923,Visual Search,0.228,4
+924,Visual Search,0.506,4
+925,Visual Search,0.818,4
+926,Visual Search,0.01,4
+927,Visual Search,0.01,4
+928,Visual Search,0.506,4
+929,Visual Search,0.01,4
+930,Visual Search,0.409,4
+931,Visual Search,0.635,1
+932,Visual Search,0.529,1
+933,Visual Search,0.762,1
+934,Visual Search,0.5,1
+935,Visual Search,0.043,1
+936,Visual Search,0.316,1
+937,Visual Search,0.821,1
+938,Visual Search,0.462,1
+939,Visual Search,0.01,1
+940,Visual Search,0.908,1
+941,Visual Search,0.528,1
+942,Visual Search,0.796,1
+943,Visual Search,0.014,1
+944,Visual Search,0.403,1
+945,Visual Search,0.01,1
+946,Visual Search,0.002,1
+947,Visual Search,0.01,1
+948,Visual Search,0.283,1
+949,Visual Search,0.699,1
+950,Visual Search,0.578,1
+951,Visual Search,0.676,1
+952,Visual Search,0.838,1
+953,Visual Search,0.653,1
+954,Visual Search,0.278,1
+955,Visual Search,0.605,1
+956,Visual Search,0.734,1
+957,Visual Search,0.31,1
+958,Visual Search,0.64,1
+959,Visual Search,0.011,1
+960,Visual Search,0.489,1
+961,Visual Search,0.01,2
+962,Visual Search,0.738,2
+963,Visual Search,0.724,2
+964,Visual Search,0.01,2
+965,Visual Search,0.471,2
+966,Visual Search,0.325,2
+967,Visual Search,0.684,2
+968,Visual Search,0.01,2
+969,Visual Search,0.01,2
+970,Visual Search,0.129,2
+971,Visual Search,0.235,2
+972,Visual Search,0.107,2
+973,Visual Search,0.01,2
+974,Visual Search,0.097,2
+975,Visual Search,0.01,2
+976,Visual Search,0.01,2
+977,Visual Search,0.01,2
+978,Visual Search,0.661,2
+979,Visual Search,0.01,2
+980,Visual Search,0.001,2
+981,Visual Search,0.711,2
+982,Visual Search,0.739,2
+983,Visual Search,0.029,2
+984,Visual Search,0.003,2
+985,Visual Search,0.423,2
+986,Visual Search,0.01,2
+987,Visual Search,0.411,2
+988,Visual Search,0.635,2
+989,Visual Search,0.047,2
+990,Visual Search,0.084,2
+991,Visual Search,0.773,3
+992,Visual Search,0.519,3
+993,Visual Search,0.01,3
+994,Visual Search,0.012,3
+995,Visual Search,0.01,3
+996,Visual Search,0.539,3
+997,Visual Search,0.01,3
+998,Visual Search,0.01,3
+999,Visual Search,0.245,3
+1000,Visual Search,0.588,3
+1001,Visual Search,0.01,3
+1002,Visual Search,0.003,3
+1003,Visual Search,0.494,3
+1004,Visual Search,0.01,3
+1005,Visual Search,0.002,3
+1006,Visual Search,0.01,3
+1007,Visual Search,0.01,3
+1008,Visual Search,0.01,3
+1009,Visual Search,0.656,3
+1010,Visual Search,0.005,3
+1011,Visual Search,0.211,3
+1012,Visual Search,0.09,3
+1013,Visual Search,0.01,3
+1014,Visual Search,0.423,3
+1015,Visual Search,0.01,3
+1016,Visual Search,0.01,3
+1017,Visual Search,0.654,3
+1018,Visual Search,0.082,3
+1019,Visual Search,0.06,3
+1020,Visual Search,0.449,4
+1021,Visual Search,0.01,4
+1022,Visual Search,0.001,4
+1023,Visual Search,0.281,4
+1024,Visual Search,0.242,4
+1025,Visual Search,0.01,4
+1026,Visual Search,0.063,4
+1027,Visual Search,0.01,4
+1028,Visual Search,0.005,4
+1029,Visual Search,0.199,4
+1030,Visual Search,0.01,4
+1031,Visual Search,0.134,4
+1032,Visual Search,0.01,4
+1033,Visual Search,0.01,4
+1034,Visual Search,0.1,4
+1035,Visual Search,0.109,4
+1036,Visual Search,0.527,4
+1037,Visual Search,0.128,4
+1038,Visual Search,0.544,4
+1039,Visual Search,0.01,4
+1040,Visual Search,0.748,4
+1041,Visual Search,0.001,4
+1042,Visual Search,0.013,4

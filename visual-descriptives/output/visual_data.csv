@@ -1,0 +1,831 @@
+,type,dist_search,stage
+0,data,0.99,1
+1,data,0.99,1
+2,data,0.01,1
+3,data,0.01,1
+4,data,0.01,1
+5,data,0.5897435897435898,1
+6,data,0.01,1
+7,data,0.01,1
+8,data,0.01,1
+9,data,0.99,1
+10,data,0.01,1
+11,data,0.01,1
+12,data,0.01,1
+13,data,0.99,1
+14,data,0.01,1
+15,data,0.99,1
+16,data,0.01,1
+17,data,0.01,1
+18,data,0.01,1
+19,data,0.01,1
+20,data,0.01,1
+21,data,0.01,1
+22,data,0.99,1
+23,data,0.01,1
+24,data,0.4074074074074074,1
+25,data,0.01,1
+26,data,0.01,1
+27,data,0.5925925925925926,1
+28,data,0.01,1
+29,data,0.01,1
+30,data,0.01,1
+31,data,0.01,1
+32,data,0.99,1
+33,data,0.01,1
+34,data,0.01,1
+35,data,0.99,1
+36,data,0.01,1
+37,data,0.01,1
+38,data,0.99,1
+39,data,0.01,1
+40,data,0.01,1
+41,data,0.01,1
+42,data,0.01,1
+43,data,0.99,1
+44,data,0.01,1
+45,data,0.01,1
+46,data,0.01,1
+47,data,0.01,1
+48,data,0.01,1
+49,data,0.99,1
+50,data,0.01,1
+51,data,0.01,1
+52,data,0.01,1
+53,data,0.01,1
+54,data,0.01,1
+55,data,0.01,1
+56,data,0.01,1
+57,data,0.01,1
+58,data,0.99,1
+59,data,0.01,1
+60,data,0.99,1
+61,data,0.5,1
+62,data,0.01,1
+63,data,0.01,1
+64,data,0.01,1
+65,data,0.01,1
+66,data,0.99,1
+67,data,0.01,1
+68,data,0.01,1
+69,data,0.01,1
+70,data,0.01,1
+71,data,0.99,1
+72,data,0.01,1
+73,data,0.01,1
+74,data,0.01,1
+75,data,0.01,1
+76,data,0.99,1
+77,data,0.01,1
+78,data,0.01,1
+79,data,0.01,1
+80,data,0.01,1
+81,data,0.01,1
+82,data,0.01,1
+83,data,0.01,1
+84,data,0.99,1
+85,data,0.01,1
+86,data,0.01,1
+87,data,0.01,1
+88,data,0.01,1
+89,data,0.01,1
+90,data,0.01,1
+91,data,0.01,1
+92,data,0.01,1
+93,data,0.99,1
+94,data,0.99,1
+95,data,0.01,1
+96,data,0.99,1
+97,data,0.01,1
+98,data,0.01,1
+99,data,0.01,1
+100,data,0.99,1
+101,data,0.01,1
+102,data,0.01,1
+103,data,0.01,1
+104,data,0.01,1
+105,data,0.99,1
+106,data,0.01,1
+107,data,0.01,1
+108,data,0.01,2
+109,data,0.1290322580645161,2
+110,data,0.99,2
+111,data,0.01,2
+112,data,0.01,2
+113,data,0.0256410256410256,2
+114,data,0.01,2
+115,data,0.01,2
+116,data,0.01,2
+117,data,0.01,2
+118,data,0.01,2
+119,data,0.99,2
+120,data,0.99,2
+121,data,0.01,2
+122,data,0.99,2
+123,data,0.01,2
+124,data,0.01,2
+125,data,0.99,2
+126,data,0.01,2
+127,data,0.01,2
+128,data,0.01,2
+129,data,0.01,2
+130,data,0.01,2
+131,data,0.01,2
+132,data,0.4285714285714286,2
+133,data,0.01,2
+134,data,0.01,2
+135,data,0.01,2
+136,data,0.99,2
+137,data,0.01,2
+138,data,0.01,2
+139,data,0.99,2
+140,data,0.99,2
+141,data,0.99,2
+142,data,0.99,2
+143,data,0.01,2
+144,data,0.01,2
+145,data,0.3199999999999999,2
+146,data,0.01,2
+147,data,0.01,2
+148,data,0.99,2
+149,data,0.01,2
+150,data,0.99,2
+151,data,0.01,2
+152,data,0.01,2
+153,data,0.01,2
+154,data,0.01,2
+155,data,0.01,2
+156,data,0.01,2
+157,data,0.01,2
+158,data,0.01,2
+159,data,0.01,2
+160,data,0.01,2
+161,data,0.99,2
+162,data,0.99,2
+163,data,0.01,2
+164,data,0.01,2
+165,data,0.01,2
+166,data,0.01,2
+167,data,0.4186046511627906,2
+168,data,0.0714285714285714,2
+169,data,0.01,2
+170,data,0.01,2
+171,data,0.01,2
+172,data,0.01,2
+173,data,0.1904761904761904,2
+174,data,0.01,2
+175,data,0.01,2
+176,data,0.01,2
+177,data,0.99,2
+178,data,0.2903225806451612,2
+179,data,0.01,2
+180,data,0.01,2
+181,data,0.01,2
+182,data,0.01,2
+183,data,0.3947368421052631,2
+184,data,0.01,2
+185,data,0.01,2
+186,data,0.01,2
+187,data,0.99,2
+188,data,0.99,2
+189,data,0.01,2
+190,data,0.01,2
+191,data,0.0999999999999999,2
+192,data,0.01,2
+193,data,0.01,2
+194,data,0.01,2
+195,data,0.01,2
+196,data,0.01,2
+197,data,0.01,2
+198,data,0.01,2
+199,data,0.99,2
+200,data,0.5428571428571429,2
+201,data,0.01,2
+202,data,0.01,2
+203,data,0.3461538461538461,2
+204,data,0.01,2
+205,data,0.01,2
+206,data,0.01,2
+207,data,0.99,2
+208,data,0.99,2
+209,data,0.2068965517241379,2
+210,data,0.01,2
+211,data,0.01,2
+212,data,0.99,2
+213,data,0.01,2
+214,data,0.01,2
+215,data,0.01,3
+216,data,0.01,3
+217,data,0.01,3
+218,data,0.99,3
+219,data,0.01,3
+220,data,0.0512820512820513,3
+221,data,0.01,3
+222,data,0.99,3
+223,data,0.01,3
+224,data,0.3333333333333333,3
+225,data,0.01,3
+226,data,0.2558139534883721,3
+227,data,0.01,3
+228,data,0.01,3
+229,data,0.01,3
+230,data,0.4074074074074074,3
+231,data,0.01,3
+232,data,0.2058823529411765,3
+233,data,0.01,3
+234,data,0.01,3
+235,data,0.01,3
+236,data,0.99,3
+237,data,0.01,3
+238,data,0.01,3
+239,data,0.01,3
+240,data,0.99,3
+241,data,0.01,3
+242,data,0.6341463414634146,3
+243,data,0.01,3
+244,data,0.2903225806451612,3
+245,data,0.01,3
+246,data,0.01,3
+247,data,0.01,3
+248,data,0.99,3
+249,data,0.99,3
+250,data,0.99,3
+251,data,0.01,3
+252,data,0.99,3
+253,data,0.1071428571428571,3
+254,data,0.01,3
+255,data,0.01,3
+256,data,0.1142857142857143,3
+257,data,0.01,3
+258,data,0.99,3
+259,data,0.01,3
+260,data,0.01,3
+261,data,0.01,3
+262,data,0.01,3
+263,data,0.01,3
+264,data,0.01,3
+265,data,0.01,3
+266,data,0.01,3
+267,data,0.01,3
+268,data,0.01,3
+269,data,0.01,3
+270,data,0.01,3
+271,data,0.01,3
+272,data,0.01,3
+273,data,0.0714285714285714,3
+274,data,0.99,3
+275,data,0.99,3
+276,data,0.01,3
+277,data,0.01,3
+278,data,0.01,3
+279,data,0.01,3
+280,data,0.01,3
+281,data,0.01,3
+282,data,0.01,3
+283,data,0.01,3
+284,data,0.01,3
+285,data,0.01,3
+286,data,0.01,3
+287,data,0.01,3
+288,data,0.01,3
+289,data,0.01,3
+290,data,0.01,3
+291,data,0.1627906976744185,3
+292,data,0.01,3
+293,data,0.01,3
+294,data,0.01,3
+295,data,0.4516129032258065,3
+296,data,0.01,3
+297,data,0.01,3
+298,data,0.01,3
+299,data,0.15625,3
+300,data,0.01,3
+301,data,0.01,3
+302,data,0.01,3
+303,data,0.01,3
+304,data,0.01,3
+305,data,0.01,3
+306,data,0.01,3
+307,data,0.01,3
+308,data,0.01,3
+309,data,0.0789473684210526,3
+310,data,0.99,3
+311,data,0.2352941176470588,3
+312,data,0.01,3
+313,data,0.01,3
+314,data,0.99,3
+315,data,0.01,3
+316,data,0.99,3
+317,data,0.1944444444444444,3
+318,data,0.01,3
+319,data,0.01,3
+320,data,0.01,3
+321,data,0.01,3
+322,data,0.01,3
+323,data,0.01,4
+324,data,0.01,4
+325,data,0.01,4
+326,data,0.01,4
+327,data,0.01,4
+328,data,0.2558139534883721,4
+329,data,0.01,4
+330,data,0.01,4
+331,data,0.99,4
+332,data,0.01,4
+333,data,0.01,4
+334,data,0.01,4
+335,data,0.1489361702127659,4
+336,data,0.01,4
+337,data,0.01,4
+338,data,0.01,4
+339,data,0.01,4
+340,data,0.99,4
+341,data,0.99,4
+342,data,0.01,4
+343,data,0.01,4
+344,data,0.3076923076923077,4
+345,data,0.01,4
+346,data,0.01,4
+347,data,0.1428571428571429,4
+348,data,0.01,4
+349,data,0.01,4
+350,data,0.2272727272727273,4
+351,data,0.01,4
+352,data,0.0645161290322581,4
+353,data,0.01,4
+354,data,0.99,4
+355,data,0.01,4
+356,data,0.99,4
+357,data,0.01,4
+358,data,0.7333333333333334,4
+359,data,0.01,4
+360,data,0.01,4
+361,data,0.1999999999999999,4
+362,data,0.01,4
+363,data,0.01,4
+364,data,0.01,4
+365,data,0.01,4
+366,data,0.99,4
+367,data,0.01,4
+368,data,0.99,4
+369,data,0.01,4
+370,data,0.99,4
+371,data,0.01,4
+372,data,0.01,4
+373,data,0.01,4
+374,data,0.01,4
+375,data,0.99,4
+376,data,0.01,4
+377,data,0.99,4
+378,data,0.01,4
+379,data,0.01,4
+380,data,0.01,4
+381,data,0.01,4
+382,data,0.4516129032258065,4
+383,data,0.01,4
+384,data,0.01,4
+385,data,0.01,4
+386,data,0.99,4
+387,data,0.01,4
+388,data,0.01,4
+389,data,0.2222222222222222,4
+390,data,0.01,4
+391,data,0.01,4
+392,data,0.01,4
+393,data,0.4615384615384615,4
+394,data,0.01,4
+395,data,0.01,4
+396,data,0.99,4
+397,data,0.01,4
+398,data,0.01,4
+399,data,0.01,4
+400,data,0.01,4
+401,data,0.01,4
+402,data,0.01,4
+403,data,0.99,4
+404,data,0.01,4
+405,data,0.01,4
+406,data,0.01,4
+407,data,0.01,4
+408,data,0.01,4
+409,data,0.01,4
+410,data,0.01,4
+411,data,0.01,4
+412,data,0.01,4
+413,data,0.01,4
+414,data,0.01,4
+415,data,0.5952380952380952,4
+416,data,0.01,4
+417,data,0.01,4
+418,data,0.01,4
+419,data,0.175,4
+420,data,0.01,4
+421,data,0.01,4
+422,data,0.01,4
+423,data,0.99,4
+424,data,0.01,4
+425,data,0.0769230769230768,4
+426,data,0.01,4
+427,data,0.01,4
+428,data,0.01,4
+429,data,0.01,4
+430,data,0.99,4
+431,Visual Search,0.713,1
+432,Visual Search,0.507,1
+433,Visual Search,0.96,1
+434,Visual Search,0.607,1
+435,Visual Search,0.01,1
+436,Visual Search,0.642,1
+437,Visual Search,0.678,1
+438,Visual Search,0.627,1
+439,Visual Search,0.01,1
+440,Visual Search,0.479,1
+441,Visual Search,0.01,1
+442,Visual Search,0.883,1
+443,Visual Search,0.84,1
+444,Visual Search,0.561,1
+445,Visual Search,0.439,1
+446,Visual Search,0.01,1
+447,Visual Search,0.01,1
+448,Visual Search,0.049,1
+449,Visual Search,0.942,1
+450,Visual Search,0.58,1
+451,Visual Search,0.659,1
+452,Visual Search,0.724,1
+453,Visual Search,0.985,1
+454,Visual Search,0.01,1
+455,Visual Search,0.01,1
+456,Visual Search,0.01,2
+457,Visual Search,0.746,2
+458,Visual Search,0.894,2
+459,Visual Search,0.01,2
+460,Visual Search,0.01,2
+461,Visual Search,0.01,2
+462,Visual Search,0.341,2
+463,Visual Search,0.01,2
+464,Visual Search,0.01,2
+465,Visual Search,0.01,2
+466,Visual Search,0.01,2
+467,Visual Search,0.01,2
+468,Visual Search,0.579,2
+469,Visual Search,0.408,2
+470,Visual Search,0.439,2
+471,Visual Search,0.01,2
+472,Visual Search,0.549,2
+473,Visual Search,0.01,2
+474,Visual Search,0.719,2
+475,Visual Search,0.57,2
+476,Visual Search,0.419,2
+477,Visual Search,0.647,2
+478,Visual Search,0.19,2
+479,Visual Search,0.01,2
+480,Visual Search,0.01,2
+481,Visual Search,0.01,2
+482,Visual Search,0.002,3
+483,Visual Search,0.636,3
+484,Visual Search,0.149,3
+485,Visual Search,0.01,3
+486,Visual Search,0.707,3
+487,Visual Search,0.084,3
+488,Visual Search,0.01,3
+489,Visual Search,0.01,3
+490,Visual Search,0.01,3
+491,Visual Search,0.18,3
+492,Visual Search,0.01,3
+493,Visual Search,0.662,3
+494,Visual Search,0.579,3
+495,Visual Search,0.272,3
+496,Visual Search,0.257,3
+497,Visual Search,0.01,3
+498,Visual Search,0.01,3
+499,Visual Search,0.131,3
+500,Visual Search,0.01,3
+501,Visual Search,0.59,3
+502,Visual Search,0.671,3
+503,Visual Search,0.01,3
+504,Visual Search,0.01,3
+505,Visual Search,0.01,3
+506,Visual Search,0.01,3
+507,Visual Search,0.01,3
+508,Visual Search,0.664,4
+509,Visual Search,0.539,4
+510,Visual Search,0.494,4
+511,Visual Search,0.01,4
+512,Visual Search,0.01,4
+513,Visual Search,0.085,4
+514,Visual Search,0.539,4
+515,Visual Search,0.323,4
+516,Visual Search,0.01,4
+517,Visual Search,0.01,4
+518,Visual Search,0.01,4
+519,Visual Search,0.119,4
+520,Visual Search,0.875,4
+521,Visual Search,0.242,4
+522,Visual Search,0.348,4
+523,Visual Search,0.01,4
+524,Visual Search,0.672,4
+525,Visual Search,0.131,4
+526,Visual Search,0.01,4
+527,Visual Search,0.59,4
+528,Visual Search,0.01,4
+529,Visual Search,0.304,4
+530,Visual Search,0.01,4
+531,Visual Search,0.01,4
+532,Visual Search,0.01,4
+533,Visual Search,0.01,4
+534,Visual Search,0.01,1
+535,Visual Search,0.266,1
+536,Visual Search,0.595,1
+537,Visual Search,0.01,1
+538,Visual Search,0.488,1
+539,Visual Search,0.676,1
+540,Visual Search,0.01,1
+541,Visual Search,0.64,1
+542,Visual Search,0.01,1
+543,Visual Search,0.183,1
+544,Visual Search,0.708,1
+545,Visual Search,0.801,1
+546,Visual Search,0.01,1
+547,Visual Search,0.01,1
+548,Visual Search,0.01,1
+549,Visual Search,0.881,1
+550,Visual Search,0.634,1
+551,Visual Search,0.725,1
+552,Visual Search,0.089,1
+553,Visual Search,0.094,1
+554,Visual Search,0.163,1
+555,Visual Search,0.184,1
+556,Visual Search,0.01,1
+557,Visual Search,0.008,1
+558,Visual Search,0.676,1
+559,Visual Search,0.555,1
+560,Visual Search,0.696,1
+561,Visual Search,0.374,1
+562,Visual Search,0.135,1
+563,Visual Search,0.731,2
+564,Visual Search,0.813,2
+565,Visual Search,0.595,2
+566,Visual Search,0.55,2
+567,Visual Search,0.01,2
+568,Visual Search,0.718,2
+569,Visual Search,0.612,2
+570,Visual Search,0.635,2
+571,Visual Search,0.531,2
+572,Visual Search,0.251,2
+573,Visual Search,0.821,2
+574,Visual Search,0.514,2
+575,Visual Search,0.809,2
+576,Visual Search,0.01,2
+577,Visual Search,0.66,2
+578,Visual Search,0.041,2
+579,Visual Search,0.145,2
+580,Visual Search,0.724,2
+581,Visual Search,0.715,2
+582,Visual Search,0.01,2
+583,Visual Search,0.006,2
+584,Visual Search,0.257,2
+585,Visual Search,0.01,2
+586,Visual Search,0.01,2
+587,Visual Search,0.016,2
+588,Visual Search,0.886,2
+589,Visual Search,0.006,2
+590,Visual Search,0.062,2
+591,Visual Search,0.017,2
+592,Visual Search,0.928,3
+593,Visual Search,0.001,3
+594,Visual Search,0.01,3
+595,Visual Search,0.01,3
+596,Visual Search,0.01,3
+597,Visual Search,0.003,3
+598,Visual Search,0.01,3
+599,Visual Search,0.655,3
+600,Visual Search,0.01,3
+601,Visual Search,0.748,3
+602,Visual Search,0.009,3
+603,Visual Search,0.514,3
+604,Visual Search,0.139,3
+605,Visual Search,0.01,3
+606,Visual Search,0.734,3
+607,Visual Search,0.01,3
+608,Visual Search,0.174,3
+609,Visual Search,0.724,3
+610,Visual Search,0.191,3
+611,Visual Search,0.002,3
+612,Visual Search,0.138,3
+613,Visual Search,0.093,3
+614,Visual Search,0.01,3
+615,Visual Search,0.003,3
+616,Visual Search,0.044,3
+617,Visual Search,0.401,3
+618,Visual Search,0.01,3
+619,Visual Search,0.329,3
+620,Visual Search,0.003,3
+621,Visual Search,0.712,4
+622,Visual Search,0.01,4
+623,Visual Search,0.903,4
+624,Visual Search,0.01,4
+625,Visual Search,0.01,4
+626,Visual Search,0.127,4
+627,Visual Search,0.549,4
+628,Visual Search,0.684,4
+629,Visual Search,0.01,4
+630,Visual Search,0.063,4
+631,Visual Search,0.156,4
+632,Visual Search,0.759,4
+633,Visual Search,0.01,4
+634,Visual Search,0.01,4
+635,Visual Search,0.146,4
+636,Visual Search,0.524,4
+637,Visual Search,0.735,4
+638,Visual Search,0.01,4
+639,Visual Search,0.085,4
+640,Visual Search,0.01,4
+641,Visual Search,0.152,4
+642,Visual Search,0.138,4
+643,Visual Search,0.01,4
+644,Visual Search,0.009,4
+645,Visual Search,0.017,4
+646,Visual Search,0.191,4
+647,Visual Search,0.585,4
+648,Visual Search,0.001,4
+649,Visual Search,0.007,4
+650,Visual Search,0.607,1
+651,Visual Search,0.878,1
+652,Visual Search,0.674,1
+653,Visual Search,0.273,1
+654,Visual Search,0.001,1
+655,Visual Search,0.506,1
+656,Visual Search,0.674,1
+657,Visual Search,0.057,1
+658,Visual Search,0.436,1
+659,Visual Search,0.876,1
+660,Visual Search,0.228,1
+661,Visual Search,0.674,1
+662,Visual Search,0.674,1
+663,Visual Search,0.608,2
+664,Visual Search,0.36,2
+665,Visual Search,0.674,2
+666,Visual Search,0.252,2
+667,Visual Search,0.01,2
+668,Visual Search,0.773,2
+669,Visual Search,0.674,2
+670,Visual Search,0.205,2
+671,Visual Search,0.591,2
+672,Visual Search,0.761,2
+673,Visual Search,0.165,2
+674,Visual Search,0.674,2
+675,Visual Search,0.674,2
+676,Visual Search,0.383,3
+677,Visual Search,0.674,3
+678,Visual Search,0.797,3
+679,Visual Search,0.674,3
+680,Visual Search,0.291,3
+681,Visual Search,0.248,3
+682,Visual Search,0.99,3
+683,Visual Search,0.712,3
+684,Visual Search,0.01,3
+685,Visual Search,0.392,3
+686,Visual Search,0.674,3
+687,Visual Search,0.211,3
+688,Visual Search,0.417,3
+689,Visual Search,0.713,3
+690,Visual Search,0.53,3
+691,Visual Search,0.355,3
+692,Visual Search,0.646,3
+693,Visual Search,0.674,3
+694,Visual Search,0.542,3
+695,Visual Search,0.674,3
+696,Visual Search,0.671,3
+697,Visual Search,0.537,4
+698,Visual Search,0.01,4
+699,Visual Search,0.29,4
+700,Visual Search,0.01,4
+701,Visual Search,0.066,4
+702,Visual Search,0.218,4
+703,Visual Search,0.99,4
+704,Visual Search,0.001,4
+705,Visual Search,0.01,4
+706,Visual Search,0.278,4
+707,Visual Search,0.01,4
+708,Visual Search,0.01,4
+709,Visual Search,0.347,4
+710,Visual Search,0.228,4
+711,Visual Search,0.506,4
+712,Visual Search,0.818,4
+713,Visual Search,0.01,4
+714,Visual Search,0.01,4
+715,Visual Search,0.506,4
+716,Visual Search,0.01,4
+717,Visual Search,0.409,4
+718,Visual Search,0.635,1
+719,Visual Search,0.529,1
+720,Visual Search,0.762,1
+721,Visual Search,0.5,1
+722,Visual Search,0.043,1
+723,Visual Search,0.316,1
+724,Visual Search,0.821,1
+725,Visual Search,0.462,1
+726,Visual Search,0.01,1
+727,Visual Search,0.908,1
+728,Visual Search,0.528,1
+729,Visual Search,0.796,1
+730,Visual Search,0.014,1
+731,Visual Search,0.403,1
+732,Visual Search,0.01,1
+733,Visual Search,0.002,1
+734,Visual Search,0.01,1
+735,Visual Search,0.283,1
+736,Visual Search,0.699,1
+737,Visual Search,0.578,1
+738,Visual Search,0.676,1
+739,Visual Search,0.838,1
+740,Visual Search,0.653,1
+741,Visual Search,0.278,1
+742,Visual Search,0.605,1
+743,Visual Search,0.734,1
+744,Visual Search,0.31,1
+745,Visual Search,0.64,1
+746,Visual Search,0.011,1
+747,Visual Search,0.489,1
+748,Visual Search,0.01,2
+749,Visual Search,0.738,2
+750,Visual Search,0.724,2
+751,Visual Search,0.01,2
+752,Visual Search,0.471,2
+753,Visual Search,0.325,2
+754,Visual Search,0.684,2
+755,Visual Search,0.01,2
+756,Visual Search,0.01,2
+757,Visual Search,0.129,2
+758,Visual Search,0.235,2
+759,Visual Search,0.107,2
+760,Visual Search,0.01,2
+761,Visual Search,0.097,2
+762,Visual Search,0.01,2
+763,Visual Search,0.01,2
+764,Visual Search,0.01,2
+765,Visual Search,0.661,2
+766,Visual Search,0.01,2
+767,Visual Search,0.001,2
+768,Visual Search,0.711,2
+769,Visual Search,0.739,2
+770,Visual Search,0.029,2
+771,Visual Search,0.003,2
+772,Visual Search,0.423,2
+773,Visual Search,0.01,2
+774,Visual Search,0.411,2
+775,Visual Search,0.635,2
+776,Visual Search,0.047,2
+777,Visual Search,0.084,2
+778,Visual Search,0.773,3
+779,Visual Search,0.519,3
+780,Visual Search,0.01,3
+781,Visual Search,0.012,3
+782,Visual Search,0.01,3
+783,Visual Search,0.539,3
+784,Visual Search,0.01,3
+785,Visual Search,0.01,3
+786,Visual Search,0.245,3
+787,Visual Search,0.588,3
+788,Visual Search,0.01,3
+789,Visual Search,0.003,3
+790,Visual Search,0.494,3
+791,Visual Search,0.01,3
+792,Visual Search,0.002,3
+793,Visual Search,0.01,3
+794,Visual Search,0.01,3
+795,Visual Search,0.01,3
+796,Visual Search,0.656,3
+797,Visual Search,0.005,3
+798,Visual Search,0.211,3
+799,Visual Search,0.09,3
+800,Visual Search,0.01,3
+801,Visual Search,0.423,3
+802,Visual Search,0.01,3
+803,Visual Search,0.01,3
+804,Visual Search,0.654,3
+805,Visual Search,0.082,3
+806,Visual Search,0.06,3
+807,Visual Search,0.449,4
+808,Visual Search,0.01,4
+809,Visual Search,0.001,4
+810,Visual Search,0.281,4
+811,Visual Search,0.242,4
+812,Visual Search,0.01,4
+813,Visual Search,0.063,4
+814,Visual Search,0.01,4
+815,Visual Search,0.005,4
+816,Visual Search,0.199,4
+817,Visual Search,0.01,4
+818,Visual Search,0.134,4
+819,Visual Search,0.01,4
+820,Visual Search,0.01,4
+821,Visual Search,0.1,4
+822,Visual Search,0.109,4
+823,Visual Search,0.527,4
+824,Visual Search,0.128,4
+825,Visual Search,0.544,4
+826,Visual Search,0.01,4
+827,Visual Search,0.748,4
+828,Visual Search,0.001,4
+829,Visual Search,0.013,4
