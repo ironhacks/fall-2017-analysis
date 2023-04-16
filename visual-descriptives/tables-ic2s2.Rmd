@@ -12,6 +12,8 @@ library(mgcv)
 library(visreg)
 df1 <- read.csv("output/final_functions.csv")
 # fit a smooth which varies by comparison_type
+df1$type[df1$type == "Functions Search"] <- "Function"
+df1$type[df1$type == "Visual Search"] <- "Visual"
 df1$type <- factor(df1$type)
 b <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML")
 summary(b)
@@ -61,11 +63,11 @@ df5 <- read.csv("output/final_visual.csv")
 #df2 <- subset(df, df$type != "simple")  
 # fit a smooth which varies by comparison_type
 df5$type <- factor(df5$type)
-b2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df5, family = betar(link="logit"), method = "REML")
-summary(b2)
+b3 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df5, family = betar(link="logit"), method = "REML")
+summary(b3)
 #visreg(b2, xvar = "stage", by = "type", data = df2, method = "REML")
-plot(b2, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
-plot(b2, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
+plot(b3, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(b3, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 
 
@@ -73,6 +75,9 @@ plot(b2, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 library(mgcv)
 library(visreg)
 df4 <- read.csv("output/functions_visual_data.csv")
+df4$type[df4$type == "Functions Search"] <- "Function"
+df4$type[df4$type == "Visual Search"] <- "Visual"
+df4$type[df4$type == " Search"] <- "Data"
 # fit a smooth which varies by comparison_type
 df4$type <- factor(df4$type)
 b2 <- gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df4, family = betar(link="logit"), method = "REML")
@@ -94,11 +99,20 @@ library('itsadug')
 gamtabs(b2, caption="Visual Search of Complete Web Applications, Maps and Charts")
 ```
 ```{r}
+library('itsadug')
+gamtabs(b3, caption="Visual Search of Complete Web Applications, Maps and Charts")
+```
+
+
+
+
+```{r}
 library(modelsummary)
 options("modelsummary_format_numeric_latex" = "plain")
 models <- list(
-"Model 1" =  gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df4, family = betar(link="logit"), method = "REML"),
-"Model 2" = gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df5, family = betar(link="logit"), method = "REML")
+"Model 1" =  gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df1, family = betar(link="logit"), method = "REML"),
+"Model 2" =  gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df4, family = betar(link="logit"), method = "REML"),
+"Model 3" = gam(dist_search ~ s(stage, k = 4, fx = TRUE, by = type) + type, data = df5, family = betar(link="logit"), method = "REML")
 )
 
 modelsummary(models, output = "latex",
