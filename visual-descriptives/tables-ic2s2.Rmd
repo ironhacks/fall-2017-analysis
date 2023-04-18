@@ -21,7 +21,7 @@ summary(b)
 #summary(a)
 #visreg(b, yvar = "dist_search", xvar = "stage", ylab= "dist_search",  by = "type", data = df1, method = "REML")
 # transform from log-odds to probabilities scale, transform to 0 and 1
-plot(b, pages = 1, trans = plogis, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
+plot(b, pages = 1, trans = exp, shift = coef(b)[1], shade = TRUE, shade.col = "lightgreen", col= "purple")
 plot(b, shade = TRUE, pages = 1, scale = 0, seWithMean = TRUE)
 ```
 ```{r}
