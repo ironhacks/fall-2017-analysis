@@ -6,7 +6,11 @@ This is a repo for Fall 2017 Data that supports two research
 
 (2) transparency 
 
-Analysis Completed for (1) Individual Exploration (Functions and Visual)
+Analysis Completed for 
+
+(1) individual exploration for functions and visual
+
+(2) GAM on functions and visual
     
     
 
